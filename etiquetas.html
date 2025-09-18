@@ -1,0 +1,2582 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>102 etiquetas html</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    ol.lista-flex {
+      display: flex;
+      flex-wrap: wrap;              /* Permite que los elementos salten de línea */
+      list-style: none;             /* Quitamos los números por defecto */
+      counter-reset: item;          /* Iniciamos contador */
+      padding: 10px;
+      margin: 0;
+      background-color: #f0f0f0;
+      box-sizing: border-box;
+      width: 100%;
+      
+    }
+
+    ol.lista-flex li {
+      counter-increment: item;
+      display: inline-flex;
+      align-items: center;
+      margin: 5px;
+      padding: 10px 15px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      white-space: nowrap;          /* Evita que se corte el contenido */
+      box-sizing: border-box;
+      
+    }
+
+    ol.lista-flex li::before {
+      content: counter(item) ". ";
+      font-weight: bold;
+      margin-right: 4px;
+    }
+
+    ol.lista-flex li:hover {
+      background-color: darkslategray;
+      border: 1px solid #0e0d0d;
+      color: white;
+    }
+
+    ol.lista-flex a:hover {
+        color: white;
+    }
+
+    a:visited {
+        color: green;
+    }
+    .boton-f {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 100;
+        background-color: darkslategrey;
+        color: white;
+        padding: 10px 15px;
+        border: 1px solid black;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+    .boton-f:hover {
+        background-color: rgb(0, 0, 0);
+    }
+
+    .ej {
+        color: blue;
+    }
+    h3 {
+        color: blue;
+    }
+  </style>
+</head>
+<body>
+    <header id="inicio"; align="center">
+        <h1>102 Etiquetas HTML</h1>
+        <p>por Camilo Reynoso Adames</p>
+    </header>
+    
+    <a class="boton-f" href="#inicio">Volver a inicio</a>
+
+    <div >
+        <ol class="lista-flex">
+            <li><a href="#doctype">&lt;!DOCTYPE html&gt;</a></li>
+            <li><a href="#html">&lt;html&gt;</a></li>
+            <li><a href="#body">&lt;body&gt;</a></li>
+            <li><a href="#head">&lt;head&gt;</a></li>
+            <li><a href="#meta">&lt;meta&gt;</a></li>
+            <li><a href="#title">&lt;title&gt;</a></li>
+            <li><a href="#link">&lt;link&gt;</a></li>
+            <li><a href="#header">&lt;header&gt;</a></li>
+            <li><a href="#main">&lt;main&gt;</a></li>
+            <li><a href="#article">&lt;article&gt;</a></li>
+            <li><a href="#aside">&lt;aside&gt;</a></li>
+            <li><a href="#nav">&lt;nav&gt;</a></li>
+            <li><a href="#footer">&lt;footer&gt;</a></li>
+            <li><a href="#div">&lt;div&gt;</a></li>
+            <li><a href="#a">&lt;a&gt;</a></li>
+            <li><a href="#abbr">&lt;abbr&gt;</a></li>
+            <li><a href="#address">&lt;address&gt;</a></li>
+            <li><a href="#audio">&lt;audio&gt;</a></li>
+            <li><a href="#b">&lt;b&gt;</a></li>
+            <li><a href="#base">&lt;base&gt;</a></li>
+            <li><a href="#bdo">&lt;bdo&gt;</a></li>
+            <li><a href="#blockquote">&lt;blockquote&gt;</a></li>
+            <li><a href="#br">&lt;br&gt;</a></li>
+            <li><a href="#button">&lt;button&gt;</a></li>
+            <li><a href="#caption">&lt;caption&gt;</a></li>
+            <li><a href="#cite">&lt;cite&gt;</a></li>
+            <li><a href="#code">&lt;code&gt;</a></li>
+            <li><a href="#col">&lt;col&gt;</a></li>
+            <li><a href="#colgroup">&lt;colgroup&gt;</a></li>
+            <li><a href="#data">&lt;data&gt;</a></li>
+            <li><a href="#datalist">&lt;datalist&gt;</a></li>
+            <li><a href="#dd">&lt;dd&gt;</a></li>
+            <li><a href="del">&lt;del&gt;</a></li>
+            <li><a href="#details">&lt;details&gt;</a></li>
+            <li><a href="#dfn">&lt;dfn&gt;</a></li>
+            <li><a href="#dialog">&lt;dialog&gt;</a></li>
+            <li><a href="#dl">&lt;dl&gt;</a></li>
+            <li><a href="#dt">&lt;dt&gt;</a></li>
+            <li><a href="#em">&lt;em&gt;</a></li>
+            <li><a href="#embed">&lt;embed&gt;</a></li>
+            <li><a href="#fieldset">&lt;fieldset&gt;</a></li>
+            <li><a href="#figcaption">&lt;figcaption&gt;</a></li>
+            <li><a href="#figure">&lt;figure&gt;</a></li>
+            <li><a href="#form">&lt;form&gt;</a></li>
+            <li><a href="#h1 a h6">&lt;h1 a h6&gt;</a></li>
+            <li><a href="#hgroup">&lt;hgroup&gt;</a></li>
+            <li><a href="#hr">&lt;hr&gt;</a></li>
+            <li><a href="#i">&lt;i&gt;</a></li>
+            <li><a href="#iframe">&lt;iframe&gt;</a></li>
+            <li><a href="#img">&lt;img&gt;</a></li>
+            <li><a href="#input">&lt;input&gt;</a></li>
+            <li><a href="#ins">&lt;ins&gt;</a></li>
+            <li><a href="#kbd">&lt;kbd&gt;</a></li>
+            <li><a href="#label">&lt;label&gt;</a></li>
+            <li><a href="#legend">&lt;legend&gt;</a></li>
+            <li><a href="#li">&lt;li&gt;</a></li>
+            <li><a href="#map">&lt;map&gt;</a></li>
+            <li><a href="#mark">&lt;mark&gt;</a></li>
+            <li><a href="#menu">&lt;menu&gt;</a></li>
+            <li><a href="#meter">&lt;meter&gt;</a></li>
+            <li><a href="#noscript">&lt;noscript&gt;</a></li>
+            <li><a href="#object">&lt;object&gt;</a></li>
+            <li><a href="#ol">&lt;ol&gt;</a></li>
+            <li><a href="#optgroup">&lt;optgroup&gt;</a></li>
+            <li><a href="#option">&lt;option&gt;</a></li>
+            <li><a href="#output">&lt;output&gt;</a></li>
+            <li><a href="#p">&lt;p&gt;</a></li>
+            <li><a href="#param">&lt;param&gt;</a></li>
+            <li><a href="#picture">&lt;picture&gt;</a></li>
+            <li><a href="#pre">&lt;pre&gt;</a></li>
+            <li><a href="#progress">&lt;progress&gt;</a></li>
+            <li><a href="#q">&lt;q&gt;</a></li>
+            <li><a href="#rp">&lt;rp&gt;</a></li>
+            <li><a href="#rt">&lt;rt&gt;</a></li>
+            <li><a href="#ruby">&lt;ruby&gt;</a></li>
+            <li><a href="#s">&lt;s&gt;</a></li>
+            <li><a href="#samp">&lt;samp&gt;</a></li>
+            <li><a href="#script">&lt;script&gt;</a></li>
+            <li><a href="#search">&lt;search&gt;</a></li>
+            <li><a href="#section">&lt;section&gt;</a></li>
+            <li><a href="#select">&lt;select&gt;</a></li>
+            <li><a href="#small">&lt;small&gt;</a></li>
+            <li><a href="#source">&lt;source&gt;</a></li>
+            <li><a href="#span">&lt;span&gt;</a></li>
+            <li><a href="#style">&lt;style&gt;</a></li>
+            <li><a href="#sub">&lt;sub&gt;</a></li>
+            <li><a href="#summary">&lt;summary&gt;</a></li>
+            <li><a href="#sup">&lt;sup&gt;</a></li>
+            <li><a href="#svg">&lt;svg&gt;</a></li>
+            <li><a href="#table">&lt;table&gt;</a></li>
+            <li><a href="#tbody">&lt;tbody&gt;</a></li>
+            <li><a href="#td">&lt;td&gt;</a></li>
+            <li><a href="#template">&lt;template&gt;</a></li>
+            <li><a href="#textarea">&lt;textareaa&gt;</a></li>
+            <li><a href="#tfoot">&lt;tfoot&gt;</a></li>
+            <li><a href="#th">&lt;th&gt;</a></li>
+            <li><a href="#thead">&lt;thead&gt;</a></li>
+            <li><a href="#time">&lt;time&gt;</a></li>
+            <li><a href="#tr">&lt;tr&gt;</a></li>
+            <li><a href="#u">&lt;u&gt;</a></li>
+            <li><a href="#ul">&lt;ul&gt;</a></li>
+            <li><a href="#video">&lt;video&gt;</a></li>
+        </ol>
+    </div>
+
+    <div style="margin: 10px;">
+        <p id="doctype"><h2>&lt;!DOCTYPE html&gt; </h2>
+            Define que este documento es un documento HTML5, ayuda a los navegadores a mostrar
+             las páginas web correctamente.<br>
+             Solo debe aparecer una vez, en la parte superior (antes que cualquier etiqueta HTML).
+        </p>
+        <p id="html"><h2>&lt;html&gt;</h2> 
+            Es el elemento raíz de una página HTML. El documento html inicia con la etiqueta &lt;html&gt;
+            y termina con &lt;/html&gt;.
+            <br>El atributo lang en la etiqueta de apertura <html> 
+            es el único atributo que necesitamos especificar en HTML5. Este atributo define el idioma
+             humano del contenido del documento que estamos creando.
+        </p>
+         <p id="body"><h2>&lt;body&gt;</h2> 
+            La parte visible de un documento HTML se encuentra entre la etiquetas &lt;body&gt;
+            y &lt;/body&gt;.
+        </p>
+        <p id="head"><h2>&lt;head&gt;</h2> 
+            Dentro de las etiquetas &lt;head&gt; y &lt;/head&gt; definiremos el título de nuestra página web, 
+            declararemos el set de caracteres correspondiente, proveeremos información general 
+            acerca del documento e incorporaremos los archivos externos con estilos, códigos 
+            Javascript o incluso imágenes necesarias para generar la página en la pantalla. 
+            Excepto por el título y algunos íconos, el resto de la información incorporada en el 
+            documento entre estas etiquetas es invisible para el usuario. 
+        </p>
+        <p id="meta"><h2>&lt;meta&gt;</h2> 
+            Junto al atributo charset seguido de la codificacion define el juego de caracteres a 
+            utilizar para mostrar el documento. <br> 
+            Se utiliza como se muestra a continuacion.<br>
+            &lt;meta charset="UTF-8"&gt;. <br>
+            La etiqueta &lt;meta&gt; acepta otros atributos como name o content.
+        </p>
+        <p id="title"><h2>&lt;title&gt;</h2> 
+             El texto entre las etiquetas &lt;title&gt; es el título del documento que estamos creando.
+             Normalmente este texto es mostrado en la barra superior de la ventana del navegador.
+        </p>
+        <p id="link"><h2>&lt;link&gt;</h2> 
+             Este elemento es usado para incorporar estilos, códigos Javascript, imágenes o iconos desde 
+             archivos externos. <br>
+             Aqui un ejemplo de como agregar un documento de estilo css. <br>
+             &lt;link rel=”stylesheet” href=”misestilos.css”&gt; <br>
+             En HTML5 Solo necesitamos dos atributos para incorporar nuestro archivo de estilos: 
+             rel y href. El atributo rel significa “relación” y es acerca de la relación entre
+              el documento y el archivo que estamos incorporando por medio de href.
+
+            <p class="ej">
+                &lt;head&gt;
+                &lt;link rel="stylesheet" href="styles.css"&gt;
+                &lt;/head&gt;
+
+            </p>
+
+        <p id="header"><h2>&lt;header&gt;</h2> 
+             Representa un contenedor para contenido introductorio o un conjunto de enlaces de navegacion.
+              <br> Admite atributos globales y de evento.<br>
+             Normalmente contiene: <br>
+             <ul>
+                <li>Uno o más elementos de encabezado (&lt;h1&gt; - &lt;h6&gt;)</li>
+                <li>Logotipo o icono.</li>
+                <li>Informacion de autoría.</li>
+             </ul>  
+        </p>
+        <p id="main"><h2>&lt;main&gt;</h2> 
+            Especifica el contenido principal de un documento, debe ser exclusivo del documento. No debe
+             tener contenido repetido en otros documentos, como barras laterales, enlaces de navegacion,
+            información de autor, Logotipos del sitio y formulario de búsqueda.<br>
+            No debe haber más de uno, ni debe ser descendiente de un elemento &lt;aside&gt;,
+            &lt;article&gt;, &lt;footer&gt;, &lt;header&gt; o &lt;nav&gt;.
+              <br> Admite atributos globales y de evento.<br>
+        </p>
+        <p id="article"><h2>&lt;article&gt;</h2> 
+            Especifica contenido independiente y autonomo. Un articúlo debe tener sentido por sí mismo
+            y debe ser posible distribuirlo independientemente del resto del site. No se visualiza de
+            forma especial en el navegador.<br>
+
+            Fuentes potenciales de &lt;article&gt;,
+            <ul>
+                <li>Publicación en Foro.</li>
+                <li>Entrada de Blog.</li>
+                <li>Noticia</li>
+            </ul>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                
+                &lt;article&gt;<br>
+                &lt;h2&gt;Microsoft Edge&lt;/h2&gt;<br>
+                &lt;p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. 
+                Microsoft Edge replaced Internet Explorer.&lt;/p&gt;<br>
+                &lt;/article&gt;
+            </p>
+        </p>
+        <p id="aside"><h2>&lt;aside&gt;</h2> 
+            Define algún contenido además del contenido en el que se coloca. 
+            El contenido adicional debe estar relacionado indirectamente con el contenido circundante.
+           <br> <b>Consejo:</b> El contenido &lt;aside&gt; a menudo se coloca como una barra lateral en un documento.
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                
+                &lt;aside&gt;<br>
+                    &lt;p&gt;The Epcot center is a theme park at Walt Disney World Resort featuring 
+                    exciting attractions, international pavilions, award-winning fireworks and 
+                    seasonal special events.&lt;/p&gt;<br>
+                &lt;/aside&gt;
+            </p>
+        </p>
+        <p id="nav"><h2>&lt;nav&gt;</h2> 
+            Define un conjunto de enlaces de navegación.<br>
+            Tenga en cuenta que NO todos los enlaces de un documento deben estar dentro de un elemento 
+            &lt;nav&gt;. Este elemento está diseñado únicamente para bloques principales de enlaces 
+            de navegación.<br>
+            Los navegadores, como los lectores de pantalla para usuarios discapacitados, 
+            pueden usar este elemento para determinar si se debe omitir la representación inicial 
+            de este contenido.
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                    &lt;nav&gt;<br>
+                          &lt;a href="/html/"&gt;HTML&lt;/a&gt; <br>
+                          &lt;a href="/css/"&gt;CSS&lt;/a&gt;<br>
+                          &lt;a href="/js/"&gt;JavaScript&lt;/a&gt;<br>
+                          &lt;a href="/python/"&gt;Python&lt;/a&gt;<br>
+                    &lt;/nav>
+            </p>
+        </p>
+        <p id="footer"><h2>&lt;footer&gt;</h2> 
+            Define un pie de página para un documento o sección.
+            Un &lt;footer&gt; 
+            <br>normalmente contiene:
+            <ul>
+                <li>información de derechos de autor</li>  
+                <li>Información del contacto</li>         
+                <li>mapa del sitio</li>
+                <li>volver a los enlaces superiores</li>
+                <li>documentos relacionados</li>            
+            </ul>
+            
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                    &lt;footer&gt;<br>
+                          &lt;p&gt;Author: Hege Refsnes&lt;/p&gt;<br>
+                         &lt;p&gt;&lt;a href="mailto:hege@example.com"&gt;hege@example.com&lt;/a&gt;&lt;/p&gt;
+                   <br> &lt;/footer&gt;
+            </p>
+        </p>
+        <p id="div"><h2>&lt;div&gt;</h2> 
+            Define una división o una sección en un documento HTML.
+            La etiqueta &lt;div&gt; e puede diseñar fácilmente mediante el atributo de clase o id.<br>
+            <br>De forma predeterminada, los navegadores siempre colocan un salto de línea antes y después del &lt;div&gt;
+                      
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                    &lt;div class="myDiv"&gt;<br>
+                         &lt;h2>This is a heading in a div element&lt;/h2&gt;<br>
+                           &lt;p>This is some text in a div element.&lt;/p&gt;<br>
+                   &lt;/div&gt;
+            </p>
+        </p>
+        <p id="a"><h2>&lt;a&gt;</h2> 
+            Define un hipervínculo, que se utiliza para vincular de una página a otra.<br>
+            El atributo más importante del elemento &lt;a&gt  es el atributo href, que indica el destino del enlace.<br>
+            De forma predeterminada, los enlaces aparecerán de la siguiente manera en todos los navegadores:
+            <ul>
+                <li>Un enlace no visitado esta subrayado y azul.</li>
+                <li>Un enlace visitado esta subrayado y en color morado.</li>
+                <li>Un enlace activo esta subrayado y n rojo</li>
+            </ul>                      
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                   &lt;a href="https://www.w3schools.com">Visit W3Schools.com!&lt;/a&gt;<br>
+                   <a href="https://www.w3schools.com">Visit W3Schools.com!</a>
+
+            </p>
+        </p>
+        <p id="abbr"><h2>&lt;abbr&gt;</h2> 
+            Define una abreviatura o un acrónimo, como "HTML", "CSS", "Sr.", "Dr.", "ASAP", "ATM".<br>
+            Consejo: utilice el atributo global para mostrar la descripción de la abreviatura/acrónimo
+             cuando pase el mouse sobre el atributo title.  
+                                  
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                The &lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt; was founded in 1948.<br>
+                The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.
+            </p>
+        </p>
+        <p id="address"><h2>&lt;address&gt;</h2> 
+            Define la información de contacto del autor/propietario de un documento o artículo.<br>
+            La información de contacto puede ser una dirección de correo electrónico, URL, dirección
+             física, número de teléfono, nombre de usuario en redes sociales, etc.<br>
+             El texto del normalmente se muestra en cursiva y los navegadores siempre agregarán 
+             un salto de línea antes y después del elemento.<br>                     
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;address&gt;
+                   Written by &lt;a href="mailto:webmaster@example.com">Jon Doe&lt;/a&gt;.&lt;br&gt;<br>
+                   Visit us at:&lt;br&gt;<br>
+                   Example.com&lt;br&gt;<br>
+                   Box 564, Disneyland&lt;br&gt;<br>
+                   USA<br>
+                &lt;/address&gt;<br><br>
+                <address>
+                    Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br>
+                    Visit us at:<br>
+                    Example.com<br>
+                    Box 564, Disneyland<br>
+                    USA
+                </address>
+            </p>
+        </p>
+        <p id="audio"><h2>&lt;audio&gt;</h2> 
+            La etiqueta &lt;audio&gt; se utiliza para incrustar contenido de sonido en un documento, 
+                como música u otras transmisiones de audio.<br>
+                La &lt;audio&gt;etiqueta contiene una o más etiquetas &lt;source&gt; con diferentes
+                 fuentes de audio. El navegador seleccionará la primera fuente compatible.<br>
+                 El texto entre las etiquetas &lt;audio&gt;y &lt;/audio&gt; solo se mostrará en 
+                 navegadores que no admitan el elemento &lt;audio&gt;.<br>
+                 Hay tres formatos de audio admitidos en HTML: MP3, WAV y OGG.                     
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;audio controls&gt;<br>
+                      &lt;source src="horse.ogg" type="audio/ogg"&gt;<br>
+                      &lt;source src="horse.mp3" type="audio/mpeg"&gt;<br>
+                      Your browser does not support the audio tag.<br>
+                &lt;/audio>   <br>
+                
+                <audio controls><br>
+                      <source src="horse.ogg" type="audio/ogg">
+                      <source src="horse.mp3" type="audio/mpeg">
+                      Your browser does not support the audio tag.
+                </audio>
+            </p>
+        </p>
+        <p id="b"><h2>&lt;b&gt;</h2> 
+            Especifica texto en negrita sin ninguna importancia adicional.<br>               
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                   &lt;p&gt;This is normal text - &lt;b&gt;and this is bold text&lt;/b&gt;.&lt;/p&gt;
+                   <p>This is normal text - <b>and this is bold text</b>.</p>
+            </p>
+        </p>
+        <p id="base"><h2>&lt;base&gt;</h2> 
+            La etiqueta &lt;base&gt; especifica la URL base y/o el destino de todas las URL relativas en un
+             documento.<br>
+             La etiqueta &lt;base&gt; debe tener presente un atributo href o un atributo target, o ambos.<br>
+             Sólo puede haber un único elemento &lt;base&gt; en un documento, y debe estar dentro del 
+             elemento &lt;head&gt;. <br>                     
+            <br> Admite atributos globales pero no de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                   &lt;head&gt;<br>
+                    &lt;base href="https://www.w3schools.com/" target="_blank"&gt;<br>
+                &lt;/head&gt;<br>
+                &lt;body&gt;<br>
+                    &lt;img src="images/stickman.gif" width="24" height="39" alt="Stickman"&gt;<br>
+                    &lt;a href="tags/tag_base.asp">HTML base Tag&lt;/a&gt;<br>
+                &lt;/body&gt;
+            </p>
+        </p>
+        <p id="bdo"><h2>&lt;bdo&gt;</h2> 
+            BDO significa Anulación Bidireccional.<br>
+            La etiqueta &lt;bdo&gt; se utiliza para anular la dirección del texto actual.<br>                      
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                   &lt;p&gt;&lt;bdo dir="rtl"&gt;This paragraph will go right-to-left.&lt;/bdo&gt;&lt;/p&gt;
+                   <p><bdo dir="rtl">This paragraph will go right-to-left.</bdo></p>
+            </p>
+        </p>
+        <p id="blockquote"><h2>&lt;blockquote&gt;</h2> 
+            Especifica una sección que se cita de otra fuente.<br>
+            Los navegadores generalmente sangran los elementos &lt;blockquote&gt;.
+                                  
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                   &lt;blockquote cite="http://www.worldwildlife.org/who/index.html"&gt;<br>
+                    For 50 years, WWF has been protecting the future of nature. The world's leading conservation<br>
+                     organization, WWF works in 100 countries and is supported by 1.2 million members in the United<br>
+                      States and close to 5 million globally.<br>
+                    &lt;/blockquote&gt;
+
+                    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+                    For 50 years, WWF has been protecting the future of nature. The world's leading conservation
+                     organization, WWF works in 100 countries and is supported by 1.2 million members in the United
+                      States and close to 5 million globally.
+                    </blockquote>
+            </p>
+        </p>
+        <p id="br"><h2>&lt;br&gt;</h2> 
+            La etiqueta &lt;br&gt; inserta un solo salto de línea.<br>
+            La etiqueta &lt;br&gt; es una etiqueta vacía, lo que significa que no tiene etiqueta final.<br>
+                                 
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                   &lt;p>To force&lt;br> line breaks&lt;br> in a text,&lt;br> use the br&lt;br> element.&lt;/p>
+                   <p>To force<br> line breaks<br> in a text,<br> use the br<br> element.</p>
+            </p>
+        </p>
+        <p id="button"><h2>&lt;button&gt;</h2> 
+            La etiqueta &lt;button&gt; define un botón en el que se puede hacer clic.<br>
+                Dentro de un elemento &lt;button&gt; se puede colocar texto (y etiquetas como &lt;i>, &lt;b>, &lt;strong>, &lt;br>, &lt;img>, etc.).
+                 Esto no es posible con un botón creado con el elemento &lt;input>.<br>
+                 Consejo: especifique siempre el atributo type de un elemento &lt;button&gt; para indicar a los navegadores qué tipo de botón es.                     
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                   &lt;button type="button">Click Me!&lt;/button><br>
+                   <button type="button">Click Me!</button>
+            </p>
+        </p>
+        <p id="caption"><h2>&lt;caption&gt;</h2> 
+            La etiqueta &lt;caption&gt; define un título de tabla.<br>
+            La etiqueta &lt;caption&gt; debe insertarse inmediatamente después de la etiqueta &lt;table> .                      
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;table><br>
+                    &lt;caption>Monthly savings&lt;/caption><br>
+                    &lt;ctr>
+                        &lt;th>Month&lt;/th><br>
+                        &lt;th>Savings&lt;/th><br>
+                    &lt;/tr><br>
+                    &lt;tr><br>
+                        &lt;td>January&lt;/td><br>
+                        &lt;td>$100&lt;/td><br>
+                    &lt;/tr><br>
+                &lt;/table><br>
+
+                <table style="border: 1px solid black;">
+                    <caption>Monthly savings</caption>
+                    <tr>
+                        <th>Month</th>
+                        <th>Savings</th>
+                    </tr>
+                    <tr>
+                        <td>January</td>
+                        <td>$100</td>
+                    </tr>
+                </table>
+            </p>
+        </p>
+        <p id="cite"><h2>&lt;cite&gt;</h2> 
+            La etiqueta &lt;cite&gt; define el título de una obra creativa (por ejemplo, un libro, un poema, una canción, una película,
+             una pintura, una escultura, etc.).<br>
+            El texto en el elemento &lt;cite&gt; normalmente se muestra en cursiva .<br>
+                                
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                   &lt;p>&lt;cite>The Scream&lt;/cite> by Edward Munch. Painted in 1893.&lt;/p>
+                   <p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
+            </p>
+        </p>
+        <p id="code"><h2>&lt;code&gt;</h2> 
+            La etiqueta &lt;code&gt; se utiliza para definir un fragmento de código informático. Su contenido se muestra en la fuente
+             monoespaciada predeterminada del navegador.<br>                     
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                   &lt;p>The HTML &lt;code>button&lt;/code> tag defines a clickable button.&lt;/p>
+                   <p>The HTML <code>button</code> tag defines a clickable button.</p>
+            </p>
+        </p>
+        <p id="col"><h2>&lt;col&gt;</h2> 
+            La etiqueta &lt;col&gt; especifica las propiedades de columna para cada columna dentro de un elemento &lt;colgroup>.<br>
+            La etiqueta &lt;col&gt; es útil para aplicar estilos a columnas enteras, en lugar de repetir los estilos para cada celda, 
+            para cada fila.                      
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                <table>
+                    &lt;colgroup><br>
+                        &lt;col span="2" style="background-color:red"><br>
+                        &lt;col style="background-color:yellow"><br>
+                    &lt;/colgroup><br>
+                    &lt;tr><br>
+                        &lt;th>ISBN&lt;/th><br>
+                        &lt;th>Title&lt;/th><br>
+                        &lt;th>Price&lt;/th><br>
+                    &lt;/tr><br>
+                    &lt;tr><br>
+                        &lt;td>3476896&lt;/td><br>
+                        &lt;td>My first HTML&lt;/td><br>
+                        &lt;td>$53&lt;/td><br>
+                    &lt;/tr><br>
+                &lt;/table><br>
+
+                <table>
+                    <colgroup>
+                        <col span="2" style="background-color:red">
+                        <col style="background-color:yellow">
+                    </colgroup>
+                    <tr>
+                        <th>ISBN</th>
+                        <th>Title</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>3476896</td>
+                        <td>My first HTML</td>
+                        <td>$53</td>
+                    </tr>
+                </table>
+            </p>
+        </p>
+        <p id="colgroup"><h2>&lt;colgroup&gt;</h2> 
+            La etiqueta &lt;colgroup&gt; especifica un grupo de una o más columnas en una tabla para formatear.<br>
+            La etiqueta &lt;colgroup&gt; debe ser un elemento secundario de un elemento &lt;table>, después de cualquier 
+             elemento &lt;caption> y antes de cualquier elemento &lt;thead>, &lt;tbody>, &lt;tfoot> y &lt;tr>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;table><br>
+                    &lt;colgroup><br>
+                        &lt;col span="2" style="background-color:red"><br>
+                        &lt;col style="background-color:yellow"><br>
+                    &lt;/colgroup><br>
+                    &lt;tr><br>
+                        &lt;th>ISBN&lt;/th><br>
+                        &lt;th>Title&lt;/th><br>
+                        &lt;th>Price&lt;/th><br>
+                    &lt;/tr><br>
+                    &lt;tr><br>
+                        &lt;td>3476896&lt;/td><br>
+                        &lt;td>My first HTML&lt;/td><br>
+                        &lt;td>$53&lt;/td><br>
+                    &lt;/tr><br>
+                &lt;/table><br>
+
+                <table>
+                    <colgroup>
+                        <col span="2" style="background-color:red">
+                        <col style="background-color:yellow">
+                    </colgroup>
+                    <tr>
+                        <th>ISBN</th>
+                        <th>Title</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>3476896</td>
+                        <td>My first HTML</td>
+                        <td>$53</td>
+                    </tr>
+                </table>
+            </p>
+        </p>
+        <p id="data"><h2>&lt;data&gt;</h2> 
+            La etiqueta &lt;data&gt; se utiliza para agregar una traducción legible por máquina de un contenido determinado.<br>
+            Este elemento proporciona un valor legible por máquina para procesadores de datos y un valor legible por humanos
+             para renderizar en un navegador.<br>
+             <b>Consejo:</b>Consejo: si el contenido está relacionado con la fecha o el tiempo, utilice el elemento <time> en su lugar.                    
+            <br> Admite atributos globales.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;ul><br>
+                    &lt;li>&lt;data value="21053">Cherry Tomato&lt;/data>&lt;/li><br>
+                    &lt;li>&lt;data value="21054">Beef Tomato&lt;/data>&lt;/li><br>
+                    &lt;li>&lt;data value="21055">Snack Tomato&lt;/data>&lt;/li><br>
+                &lt;/ul>
+            </p>
+        </p>
+        <p id="datalist"><h2>&lt;datalist&gt;</h2> 
+            La etiqueta &lt;datalist> especifica una lista de opciones predefinidas para un elemento &lt;input>.<br>
+            La etiqueta &lt;datalist> se utiliza para proporcionar una función de autocompletado para los elementos &lt;input>.<br>
+             Los usuarios verán una lista desplegable de opciones predefinidas al introducir datos.<br>
+             El atributo id del elemento debe ser igual al atributo list del elemento &lt;input> (esto los une).                      
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;label for="browser">Choose your browser from the list:&lt;/label><br>
+                &lt;input list="browsers" name="browser" id="browser"><br>
+                
+                &lt;datalist id="browsers"><br>
+                    &lt;option value="Edge"><br>
+                    &lt;option value="Firefox"><br>
+                    &lt;option value="Chrome"><br>
+                    &lt;option value="Opera"><br>
+                    &lt;option value="Safari"><br>
+                &lt;/datalist><br>
+
+                <label for="browser">Choose your browser from the list:</label>
+                <input list="browsers" name="browser" id="browser">
+                
+                <datalist id="browsers">
+                    <option value="Edge">
+                    <option value="Firefox">
+                    <option value="Chrome">
+                    <option value="Opera">
+                    <option value="Safari">
+                </datalist>
+            </p>
+        </p>
+        <p id="dd"><h2>&lt;dd&gt;</h2> 
+            La etiqueta &lt;dd&gt; se utiliza para describir un término/nombre en una lista de descripciones.
+            La etiqueta &lt;dd&gt; se utiliza junto con &lt;dl> (define una lista de descripciones) y &lt;dt> (define términos/nombres).
+            Dentro de una etiqueta &lt;dd&gt; puedes poner párrafos, saltos de línea, imágenes, enlaces, listas, etc.            
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;dl&gt;<br>
+                    &lt;dt&gt;Coffee&lt;/dt&gt;<br>
+                    &lt;dd&gt;Black hot drink&lt;/dd&gt;<br>
+                    &lt;dt&gt;Milk&lt;/dt&gt;<br>
+                    &lt;dd&gt;White cold drink&lt;/dd&gt;<br>
+                &lt;/dl&gt;<br>
+
+
+                <dl>
+                    <dt>Coffee</dt>
+                    <dd>Black hot drink</dd>
+                    <dt>Milk</dt>
+                    <dd>White cold drink</dd>
+                </dl>
+            </p>
+        </p>
+        <p id="del"><h2>&lt;del&gt;</h2> 
+            La etiqueta &lt;del&gt; define el texto eliminado de un documento. Los navegadores suelen tachar el texto eliminado.
+            Consejo: observe también la etiqueta &lt;ins&gt; para marcar el texto insertado.
+            
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                    &lt;p&gt;My favorite color is  &lt;del&gt;blue &lt;/del&gt;  &lt;ins&gt;red &lt;/ins&gt;! &lt;/p&gt;
+                   <p>My favorite color is <del>blue</del> <ins>red</ins>!</p>
+            </p>
+        </p>
+        <p id="details"><h2>&lt;details&gt;</h2> 
+            La etiqueta &lt;details&gt; especifica detalles adicionales que el usuario puede abrir y cerrar a pedido.<br>
+            La etiqueta &lt;details&gt; se usa a menudo para crear un widget interactivo que el usuario puede abrir y cerrar. <br>
+             De forma predeterminada, el widget está cerrado. Al abrirse, se expande y muestra su contenido.<br>
+             Se puede poner cualquier tipo de contenido dentro de la etiqueta &lt;details&gt;. <br>
+             <b>Consejo:</b> La etiqueta &lt;summary&gt; se utiliza junto con &lt;details&gt;para especificar un encabezado visible para los detalles.                      
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                 &lt;details&gt;<br>
+                     &lt;summary&gt;Epcot Center &lt;/summary&gt;<br>
+                     &lt;p&gt;Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions,
+                        award-winning fireworks and seasonal special events. &lt;/p&gt;<br>
+                 &lt;/details&gt;<br>
+
+
+                <details>
+                    <summary>Epcot Center</summary>
+                    <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions,
+                        award-winning fireworks and seasonal special events.</p>
+                </details>
+            </p>
+        </p>
+        <p id="dfn"><h2>&lt;dfn&gt;</h2> 
+            La etiqueta &lt;dfn&gt; representa el "elemento de definición" y especifica un término que se definirá dentro del contenido.<br>
+             El padre más cercano de la etiqueta &lt;dfn&gt; también debe contener la definición/explicación del término.<br>
+             El término dentro de la etiqueta &lt;dfn&gt; puede ser cualquiera de los siguientes:<br> 
+                1. Así como el contenido del elemento:&lt;dfn&gt;<br>
+                2. O bien, con el atributo de título añadido<br>
+                3. O bien, con una etiqueta &lt;abbr&gt; dentro del elemento:&lt;dfn&gt;<br>
+                4. O bien, con el atributo id añadido. Así, al usar un término, se puede hacer referencia a la definición con una etiqueta &lt;a><br>
+
+                     
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                 1. &lt;p&gt;&lt;dfn&gt;HTML&lt;/dfn&gt; is the standard markup language for creating web pages.&lt;/p&gt;<br>
+                  &lt;p&gt;&lt;dfn&gt;HTML&lt;/dfn&gt; is the standard markup language for creating web pages.&lt;/p&gt;<br>
+                 2. &lt;p&gt;&lt;dfn title="HyperText Markup Language"&gt;HTML&lt;/dfn&gt; is the standard markup language for creating web pages.&lt;/p&gt;<br>
+                  &lt;p&gt;&lt;dfn title="HyperText Markup Language"&gt;HTML&lt;/dfn&gt; is the standard markup language for creating web pages.&lt;/p&gt;<br>
+                 3.&lt;p&gt;&lt;dfn&gt;&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;&lt;/dfn&gt; is the standard markup language for creating web pages.&lt;/p&gt;<br>
+                  &lt;p&gt;&lt;dfn&gt;&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;&lt;/dfn&gt; is the standard markup language for creating web pages.&lt;/p&gt;<br>
+                4. &lt;p&gt;&lt;dfn id="html-def"&gt;HTML&lt;/dfn&gt; is the standard markup language for creating web pages.&lt;/p&gt;  <br>              
+                &lt;p&gt;This is some text...&lt;/p&gt;<br>
+                &lt;p&gt;This is some text...&lt;/p&gt;<br>
+                &lt;p&gt;Learn &lt;a href="#html-def"&gt;HTML&lt;/a&gt; now.&lt;/p&gt;<br>
+
+                 1. <p><dfn>HTML</dfn> is the standard markup language for creating web pages.</p>
+                  <p><dfn>HTML</dfn> is the standard markup language for creating web pages.</p>
+                 2. <p><dfn title="HyperText Markup Language">HTML</dfn> is the standard markup language for creating web pages.</p>
+                  <p><dfn title="HyperText Markup Language">HTML</dfn> is the standard markup language for creating web pages.</p>
+                 3.<p><dfn><abbr title="HyperText Markup Language">HTML</abbr></dfn> is the standard markup language for creating web pages.</p>
+                  <p><dfn><abbr title="HyperText Markup Language">HTML</abbr></dfn> is the standard markup language for creating web pages.</p>
+                4. <p><dfn id="html-def">HTML</dfn> is the standard markup language for creating web pages.</p>                
+                <p>This is some text...</p>
+                <p>This is some text...</p>
+                <p>Learn <a href="#html-def">HTML</a> now.</p>
+            </p>
+        </p>
+        <p id="dialog"><h2>&lt;dialog&gt;</h2> 
+            La etiqueta &lt;dialog&gt; define un cuadro de diálogo o una subventana.<br>
+            El elemento &lt;dialog&gt; facilita la creación de cuadros de diálogo emergentes y modales en una página web.<br>                     
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                   &lt;dialog open&gt;This is an open dialog window&lt;/dialog&gt;<br>
+                   <dialog open>This is an open dialog window</dialog>
+            </p>
+        </p>
+        <p id="dl"><h2>&lt;dl&gt;</h2> 
+            La etiqueta &lt;dl> define una lista de descripciones.<br>
+            La etiqueta &lt;dl> se utiliza junto con &lt;dt> (define términos/nombres) y &lt;dd> (describe cada término/nombre).<br>                      
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+                &lt;dl&gt;<br>
+                    &lt;dt&gt;Coffee&lt;/dt&gt;<br>
+                    &lt;dd&gt;Black hot drink&lt;/dd&gt;<br>
+                    &lt;dt&gt;Milk&lt;/dt&gt;<br>
+                    &lt;dd&gt;White cold drink&lt;/dd&gt;<br>
+                &lt;/dl&gt;<br>
+
+
+                <dl>
+                    <dt>Coffee</dt>
+                    <dd>Black hot drink</dd>
+                    <dt>Milk</dt>
+                    <dd>White cold drink</dd>
+                </dl>
+            </p>
+        </p>
+        <p id="dt"><h2>&lt;dt&gt;</h2> 
+            La etiqueta &lt;dt&gt; define un término/nombre en una lista de descripciones.<br>
+            La etiqueta &lt;dt&gt;etiqueta se utiliza junto con &lt;dl&gt; (define una lista de descripciones) y &lt;dd&gt; (describe cada término/nombre). <br>                   
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;dl&gt;<br>
+                    &lt;dt&gt;Coffee&lt;/dt&gt;<br>
+                    &lt;dd&gt;Black hot drink&lt;/dd&gt;<br>
+                    &lt;dt&gt;Milk&lt;/dt&gt;<br>
+                    &lt;dd&gt;White cold drink&lt;/dd&gt;<br>
+                &lt;/dl&gt;<br>
+
+
+                <dl>
+                    <dt>Coffee</dt>
+                    <dd>Black hot drink</dd>
+                    <dt>Milk</dt>
+                    <dd>White cold drink</dd>
+                </dl>
+            </p>
+        </p>
+        <p id="em"><h2>&lt;em&gt;</h2> 
+            La etiqueta &lt;em&gt; se utiliza para definir texto destacado. El contenido que contiene suele mostrarse en cursiva.<br>
+            Un lector de pantalla pronunciará las palabras &lt;em&gt; con énfasis, utilizando estrés verbal. <br>                    
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                  &lt;p&gt;We &lt;em&gt;cannot&lt;/em&gt; live like this.&lt;/p&gt;<br>
+                  <p>We <em>cannot</em> live like this.</p>
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="embed"><h2>&lt;embed&gt;</h2> 
+            La etiqueta &lt;embed&gt; define un contenedor para un recurso externo, como una página web, una imagen, 
+             un reproductor multimedia o una aplicación complementaria.                      
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                   &lt;embed type="text/html" src="snippet.html" width="500" height="200"&gt;<br>
+                   <embed type="text/html" src="snippet.html" width="500" height="200">
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="fieldset"><h2>&lt;fieldset&gt;</h2> 
+            La &lt;fieldset&gt;etiqueta se utiliza para agrupar elementos relacionados en un formulario.<br>
+            La &lt;fieldset&gt;etiqueta dibuja un cuadro alrededor de los elementos relacionados.> <br>                     
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;form action="/action_page.php"&gt;<br>
+                    &lt;fieldset&gt;<br>
+                        &lt;legend&gt;Personalia:&lt;/legend&gt;<br>
+                        &lt;label for="fname"&gt;First name:&lt;/label&gt;<br>
+                        &lt;input type="text" id="fname" name="fname"&gt;&lt;br&gt;&lt;br&gt;<br>
+                        &lt;label for="lname"&gt;Last name:&lt;/label&gt;<br>
+                        &lt;input type="text" id="lname" name="lname"&gt;&lt;br&gt;&lt;br&gt;<br>
+                        &lt;label for="email"&gt;Email:&lt;/label&gt;<br>
+                        &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;&lt;br&gt;<br>
+                        &lt;label for="birthday"&gt;Birthday:&lt;/label&gt;<br>
+                        &lt;input type="date" id="birthday" name="birthday"&gt;&lt;br&gt;&lt;br&gt;<br>
+                        &lt;input type="submit" value="Submit"&gt;<br>
+                    &lt;/fieldset&gt;<br>
+                &lt;/form&gt;<br>
+
+
+                <form action="/action_page.php">
+                    <fieldset>
+                        <legend>Personalia:</legend>
+                        <label for="fname">First name:</label>
+                        <input type="text" id="fname" name="fname"><br><br>
+                        <label for="lname">Last name:</label>
+                        <input type="text" id="lname" name="lname"><br><br>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email"><br><br>
+                        <label for="birthday">Birthday:</label>
+                        <input type="date" id="birthday" name="birthday"><br><br>
+                        <input type="submit" value="Submit">
+                    </fieldset>
+                </form>
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="figcaption"><h2>&lt;figcaption&gt;</h2> 
+            La &lt;figcaption&gt;etiqueta define un título para un elemento &lt;figure&gt;.<br>
+            El &lt;figcaption&gt;elemento se puede colocar como el primer o último hijo del elemento &lt;figure&gt;. <br>                     
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;figure&gt;<br>
+                    &lt;img src="pic_trulli.jpg" alt="Trulli" style="width:100%"&gt;<br>
+                    &lt;figcaption&gt;Fig.1 - Trulli, Puglia, Italy.&lt;/figcaption&gt;<br>
+                &lt;/figure&gt;<br>
+
+
+                <figure>
+                    <img src="pic_trulli.jpg" alt="Trulli" style="width:100%">
+                    <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+                </figure>
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="figure"><h2>&lt;figure&gt;</h2> 
+            La lt;figure&gt;etiqueta especifica contenido autónomo, como ilustraciones, diagramas, fotografías, listas de códigos, etc.<br>
+            Si bien el contenido del lt;figure&gt;elemento está relacionado con el flujo principal, su posición es independiente del 
+             flujo principal y, si se elimina, no debería afectar el flujo del documento.<br>
+             Consejo: El elemento &lt;figcaption&gt; se utiliza para agregar un título para el lt;figure&gt; elemento. <br>                 
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;figure&gt;<br>
+                    &lt;img src="pic_trulli.jpg" alt="Trulli" style="width:100%"&gt;<br>
+                    &lt;figcaption&gt;Fig.1 - Trulli, Puglia, Italy.&lt;/figcaption&gt;<br>
+                &lt;/figure&gt;<br>
+
+
+                <figure>
+                    <img src="pic_trulli.jpg" alt="Trulli" style="width:100%">
+                    <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+                </figure>
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="form"><h2>&lt;form&gt;</h2> 
+           La &lt;form&gt;etiqueta se utiliza para crear un formulario HTML para la entrada del usuario.<br>
+            El &lt;form&gt;elemento puede contener uno o más de los siguientes elementos de formulario:<br>
+                &lt;input&gt;<br>
+                &lt;textarea&gt;<br>
+                &lt;button&gt;<br>
+                &lt;select&gt;<br>
+                &lt;option&gt;<br>
+                &lt;optgroup&gt;<br>
+                &lt;fieldset&gt;<br>
+                &lt;label&gt;<br>
+                &lt;output&gt;<br>
+
+              
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;form action="/action_page.php" method="get"&gt;<br>
+                    &lt;label for="fname"&gt;First name:&lt;/label&gt;<br>
+                    &lt;input type="text" id="fname" name="fname"&gt;&lt;br&gt;&lt;br&gt;<br>
+                    &lt;label for="lname"&gt;Last name:&lt;/label&gt;<br>
+                    &lt;input type="text" id="lname" name="lname"&gt;&lt;br&gt;&lt;br&gt;<br>
+                    &lt;input type="submit" value="Submit"&gt;<br>
+                &lt;/form&gt;<br>
+
+
+                <form action="/action_page.php" method="get">
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname"><br><br>
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname"><br><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="h1 a h6"><h2>&lt;h1 a h6&gt;</h2> 
+            Las etiquetas &lt;h1&gt;to &lt;h6&gt;se utilizan para definir encabezados HTML.<br>
+            &lt;h1&gt;define el encabezado más importante. &lt;h6&gt;define el encabezado menos importante.<br>
+            Nota: Use solo uno &lt;h1&gt; por página; este debe representar el encabezado/tema principal de toda la página. <br>
+             Además, no omita niveles de encabezado: comience con &lt;h1&gt;, luego use &lt;h2&gt;, y así sucesivamente. <br>
+                     
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;h1&gt;This is heading 1&lt;/h1&gt;<br>
+                &lt;h2&gt;This is heading 2&lt;/h2&gt;<br>
+                &lt;h3&gt;This is heading 3&lt;/h3&gt;<br>
+                &lt;h4&gt;This is heading 4&lt;/h4&gt;<br>
+                &lt;h5&gt;This is heading 5&lt;/h5&gt;<br>
+                &lt;h6&gt;This is heading 6&lt;/h6&gt;<br>
+
+
+                <h1>This is heading 1</h1>
+                <h2>This is heading 2</h2>
+                <h3>This is heading 3</h3>
+                <h4>This is heading 4</h4>
+                <h5>This is heading 5</h5>
+                <h6>This is heading 6</h6>
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="hgroup"><h2>&lt;hgroup&gt;</h2> 
+            La &lt;hgroup&gt;etiqueta se utiliza para rodear un encabezado y uno o más &lt;p&gt;elementos.<br>
+            El encabezado dentro del &lt;hgroup&gt;elemento puede ser cualquiera de los &lt;h1&gt;dos &lt;h6&gt;encabezados.<br>
+            Nota: El &lt;hgroup&gt; elemento no se visualiza de forma especial en el navegador. Sin embargo, <br>
+             puedes usar CSS para darle estilo al &lt;hgroup&gt;elemento y a su contenido. <br>
+                    
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;hgroup&gt;<br>
+                    &lt;h2&gt;Norway&lt;/h2&gt;<br>
+                    &lt;p&gt;The land with the midnight sun.&lt;/p&gt;<br>
+                &lt;/hgroup&gt;<br>
+
+
+                <hgroup>
+                    <h2>Norway</h2>
+                    <p>The land with the midnight sun.</p>
+                </hgroup>
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="hr"><h2>&lt;hr&gt;</h2> 
+            La &lt;hr&gt;etiqueta define un cambio temático en una página HTML (por ejemplo, un cambio de tema).<br>
+            El &lt;hr&gt;elemento se muestra con mayor frecuencia como una regla horizontal que se utiliza para separar
+             el contenido (o definir un cambio) en una página HTML.<br>
+
+                    
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;h1&gt;The Main Languages of the Web&lt;/h1&gt;<br>
+                
+                &lt;p&gt;HTML is the standard markup language for creating Web pages. HTML describes the structure of a Web page, and consists
+                    of a series of elements. HTML elements tell the browser how to display the content.&lt;/p&gt;<br>
+                
+                &lt;hr&gt;<br>
+                
+                &lt;p&gt;CSS is a language that describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves
+                    a lot of work, because it can control the layout of multiple web pages all at once.&lt;/p&gt;<br>
+
+                
+                <h1>The Main Languages of the Web</h1>
+                
+                <p>HTML is the standard markup language for creating Web pages. HTML describes the structure of a Web page, and consists
+                    of a series of elements. HTML elements tell the browser how to display the content.</p>
+                
+                <hr>
+                
+                <p>CSS is a language that describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves
+                    a lot of work, because it can control the layout of multiple web pages all at once.</p>
+             </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="i"><h2>&lt;i&gt;</h2> 
+            La &lt;i&gt;etiqueta define una parte del texto con una voz o estilo alternativo. El contenido suele mostrarse en cursiva .<br>
+            La &lt;i&gt;etiqueta se utiliza a menudo para indicar un término técnico, una frase de otro idioma, un pensamiento, 
+             el nombre de un barco, etc.<br>
+             Utilice el &lt;i&gt;elemento sólo cuando no haya un elemento semántico más apropiado, como por ejemplo:<br>
+                &lt;em&gt; (texto enfatizado)<br>
+                &lt;strong&gt; (texto importante)<br>
+                &lt;mark&gt; (texto marcado/resaltado)<br>
+                &lt;cite&gt; (el título de una obra)<br>
+                &lt;dfn&gt; (un término de definición) <br>
+                     
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                   &lt;p&gt;&lt;i&gt;Lorem ipsum&lt;/i&gt; is the most popular filler text in history.&lt;/p&gt;<br>
+                   &lt;p&gt;The &lt;i&gt;RMS Titanic&lt;/i&gt;, a luxury steamship, sank on April 15, 1912 after striking an iceberg.&lt;/p&gt;<br>
+
+                   <p><i>Lorem ipsum</i> is the most popular filler text in history.</p>
+                   <p>The <i>RMS Titanic</i>, a luxury steamship, sank on April 15, 1912 after striking an iceberg.</p>
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="iframe"><h2>&lt;iframe&gt;</h2> 
+            La &lt;iframe&gt;etiqueta especifica un marco en línea.<br>
+            
+                Un marco en línea se utiliza para incrustar otro documento dentro del documento HTML actual.<br>
+            
+                Consejo: utilice CSS para darle estilo &lt;iframe&gt; (vea el ejemplo a continuación).<br>
+            
+                Consejo: Esrecomendable incluir siempre un atributo de título para el archivo &lt;iframe&gt;.<br> 
+                Los lectores de pantalla lo utilizan para leer el contenido del archivo &lt;iframe&gt; . <br>
+                     
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;iframe src="https://www.w3schools.com" title="W3Schools Free Online Web Tutorials"&gt;&lt;/iframe&gt;<br>
+
+                <iframe src="https://www.w3schools.com" title="W3Schools Free Online Web Tutorials"></iframe>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="img"><h2>&lt;img&gt;</h2> 
+            La &lt;img&gt;etiqueta se utiliza para incrustar una imagen en una página HTML.<br>
+            
+            Técnicamente, las imágenes no se insertan en una página web; se enlazan a páginas web. La &lt;img&gt;etiqueta crea un espacio
+            de almacenamiento para la imagen referenciada.<br>
+            
+            La &lt;img&gt;etiqueta tiene dos atributos obligatorios:<br>
+            
+            src - Especifica la ruta a la imagen<br>
+            alt - Especifica un texto alternativo para la imagen, si por algún motivo la imagen no se puede mostrar<br>
+            Nota: Además, especifique siempre el ancho y la altura de la imagen. Si no se especifican, la página podría parpadear
+            mientras se carga la imagen.<br>
+            
+            Consejo: para vincular una imagen a otro documento, simplemente anide la &lt;img&gt;etiqueta dentro de una etiqueta &lt;a&gt; (vea
+                el ejemplo a continuación).<br>
+
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                    &lt;img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600"&gt;<br>
+                   <img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="input"><h2>&lt;input&gt;</h2> 
+            La &lt;input&gt;etiqueta especifica un campo de entrada donde el usuario puede ingresar datos.<br>
+            
+            El &lt;input&gt;elemento es el elemento de forma más importante.<br>
+            
+            El &lt;input&gt;elemento se puede mostrar de varias formas, dependiendo del atributo de tipo.<br>
+            
+            Los diferentes tipos de entrada son los siguientes:<br>
+            
+            &lt;input type="button"&gt;<br>
+            &lt;input type="checkbox"&gt;<br>
+            &lt;input type="color"&gt;<br>
+            &lt;input type="date"&gt;<br>
+            &lt;input type="datetime-local"&gt;<br>
+            &lt;input type="email"&gt;<br>
+            &lt;input type="file"&gt;<br>
+            &lt;input type="hidden"&gt;<br>
+            &lt;input type="image"&gt;<br>
+            &lt;input type="month"&gt;<br>
+            &lt;input type="number"&gt;<br>
+            &lt;input type="password"&gt;<br>
+            &lt;input type="radio"&gt;<br>
+            &lt;input type="range"&gt;<br>
+            &lt;input type="reset"&gt;<br>
+            &lt;input type="search"&gt;<br>
+            &lt;input type="submit"&gt;<br>
+            &lt;input type="tel"&gt;<br>
+            &lt;input type="text"&gt;(valor predeterminado)<br>
+            &lt;input type="time"&gt;<br>
+            &lt;input type="url"&gt;<br>
+            &lt;input type="week"&gt;<br>
+            
+            Consejo: utilice siempre la etiqueta &lt;label&gt; para definir etiquetas para &lt;input type="text"&gt;, &lt;input type="checkbox"&gt;,<br>
+                &lt;input type="radio"&gt;, &lt;input type="file"&gt;, y &lt;input type="password"&gt;.&lt;br&gt; Admite atributos globales y de evento.&lt;br&gt;<br>
+
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;form action="/action_page.php"&gt;<br>
+                    &lt;label for="fname"&gt;First name:&lt;/label&gt;<br>
+                    &lt;input type="text" id="fname" name="fname"&gt;&lt;br&gt;&lt;br&gt;<br>
+                    &lt;label for="lname"&gt;Last name:&lt;/label&gt;<br>
+                    &lt;input type="text" id="lname" name="lname"&gt;&lt;br&gt;&lt;br&gt;<br>
+                    &lt;input type="submit" value="Submit"&gt;<br>
+                &lt;/form&gt;<br>
+
+
+                <form action="/action_page.php">
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname"><br><br>
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname"><br><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="ins"><h2>&lt;ins&gt;</h2>
+        La &lt;ins&gt;etiqueta define un texto insertado en un documento. Los navegadores suelen subrayar el texto insertado.<br>
+        Consejo: Observe también la etiqueta &lt;del&gt; para marcar el texto eliminado.<br>
+                     
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;p&gt;My favorite color is &lt;del&gt;blue&lt;/del&gt; &lt;ins&gt;red&lt;/ins&gt;!&lt;/p&gt;<br>
+                <p>My favorite color is <del>blue</del> <ins>red</ins>!</p>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="kbd"><h2>&lt;kbd&gt;</h2> 
+            La &lt;kbd&gt;etiqueta se utiliza para definir la entrada del teclado. Su contenido se muestra en la fuente
+            monoespaciada predeterminada del navegador.<br>
+            
+            Consejo: Esta etiqueta no está obsoleta. Sin embargo, es posible lograr un efecto más atractivo usando CSS (ver ejemplo
+            a continuación).<br>
+                      
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;p&gt;Press &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;C&lt;/kbd&gt; to copy text (Windows).&lt;/p&gt;<br>
+                
+                &lt;p&gt;Press &lt;kbd&gt;Cmd&lt;/kbd&gt; + &lt;kbd&gt;C&lt;/kbd&gt; to copy text (Mac OS).&lt;/p&gt;<br>
+
+                <p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy text (Windows).</p>
+                
+                <p>Press <kbd>Cmd</kbd> + <kbd>C</kbd> to copy text (Mac OS).</p>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="label"><h2>&lt;label&gt;</h2> 
+            La &lt;label&gt;etiqueta define una etiqueta para varios elementos:<br>
+            • &lt;tipo de entrada="casilla de verificación"&gt;<br>
+            • &lt;tipo de entrada="color"&gt;<br>
+            • &lt;tipo de entrada="fecha"&gt;<br>
+            • &lt;tipo de entrada="fecha y hora-local"&gt;<br>
+            • &lt;input type="correo electrónico"&gt;<br>
+            • &lt;tipo de entrada="archivo"&gt;<br>
+            • &lt;input type="mes"&gt;<br>
+            • &lt;tipo de entrada="número"&gt;<br>
+            • &lt;input type="contraseña"&gt;<br>
+            • &lt;tipo de entrada="radio"&gt;<br>
+            • &lt;tipo de entrada="rango"&gt;<br>
+            • &lt;input type="búsqueda"&gt;<br>
+            • &lt;tipo de entrada="tel"&gt;<br>
+            • &lt;tipo de entrada="texto"&gt;<br>
+            • &lt;tipo de entrada="tiempo"&gt;<br>
+            • &lt;tipo de entrada="url"&gt;<br>
+            • &lt;input type="semana"&gt;<br>
+            • &lt;metro&gt;<br>
+            • &lt;progreso&gt;<br>
+            • &lt;seleccionar&gt;<br>
+            • &lt;área de texto&gt;<br>
+            El uso adecuado de las etiquetas con los elementos anteriores beneficiará:<br>
+            • Usuarios de lectores de pantalla (leerán en voz alta la etiqueta cuando el usuario esté enfocado en el elemento)<br>
+            • Usuarios que tienen dificultades para hacer clic en regiones muy pequeñas (como casillas de verificación), porque<br>
+            cuando un usuario hace clic en el texto dentro del &lt;label&gt;elemento, alterna la entrada (esto aumenta el área
+            afectada).<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;form action="/action_page.php"&gt;<br>
+                &lt;input type="radio" id="html" name="fav_language" value="HTML"&gt;<br>
+                &lt;label for="html"&gt;HTML&lt;/label&gt;&lt;br&gt;<br>
+                &lt;input type="radio" id="css" name="fav_language" value="CSS"&gt;<br>
+                &lt;label for="css"&gt;CSS&lt;/label&gt;&lt;br&gt;<br>
+                &lt;input type="radio" id="javascript" name="fav_language" value="JavaScript"&gt;<br>
+                &lt;label for="javascript"&gt;JavaScript&lt;/label&gt;&lt;br&gt;&lt;br&gt;<br>
+                &lt;input type="submit" value="Submit"&gt;<br>
+                &lt;/form&gt;<br>
+
+                <form action="/action_page.php">
+                    <input type="radio" id="html" name="fav_language" value="HTML">
+                    <label for="html">HTML</label><br>
+                    <input type="radio" id="css" name="fav_language" value="CSS">
+                    <label for="css">CSS</label><br>
+                    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                    <label for="javascript">JavaScript</label><br><br>
+                    <input type="submit" value="Submit">
+                </form>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="legend"><h2>&lt;legend&gt;</h2> 
+            La &lt;legend&gt;etiqueta define un título para el elemento &lt;fieldset&gt; .<br>                     
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;form action="/action_page.php"&gt;<br>
+                &lt;fieldset&gt;<br>
+                &lt;legend&gt;Personalia:&lt;/legend&gt;<br>
+                &lt;label for="fname"&gt;First name:&lt;/label&gt;<br>
+                &lt;input type="text" id="fname" name="fname"&gt;&lt;br&gt;&lt;br&gt;<br>
+                &lt;label for="lname"&gt;Last name:&lt;/label&gt;<br>
+                &lt;input type="text" id="lname" name="lname"&gt;&lt;br&gt;&lt;br&gt;<br>
+                &lt;label for="email"&gt;Email:&lt;/label&gt;<br>
+                &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;&lt;br&gt;<br>
+                &lt;label for="birthday"&gt;Birthday:&lt;/label&gt;<br>
+                &lt;input type="date" id="birthday" name="birthday"&gt;&lt;br&gt;&lt;br&gt;<br>
+                &lt;input type="submit" value="Submit"&gt;<br>
+                &lt;/fieldset&gt;<br>
+                &lt;/form&gt;<br>
+
+                <form action="/action_page.php">
+                    <fieldset>
+                        <legend>Personalia:</legend>
+                        <label for="fname">First name:</label>
+                        <input type="text" id="fname" name="fname"><br><br>
+                        <label for="lname">Last name:</label>
+                        <input type="text" id="lname" name="lname"><br><br>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email"><br><br>
+                        <label for="birthday">Birthday:</label>
+                        <input type="date" id="birthday" name="birthday"><br><br>
+                        <input type="submit" value="Submit">
+                    </fieldset>
+                </form>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="li"><h2>&lt;li&gt;</h2> 
+            La &lt;li&gt;etiqueta define un elemento de la lista.<br>
+            La &lt;li&gt;etiqueta se utiliza dentro de listas ordenadas ( &lt;ol&gt; ), listas desordenadas ( &lt;ul&gt; ) y en
+            listas de menú ( &lt;menu&gt; ).<br>
+            En &lt;ul&gt; y &lt;menu&gt;, los elementos de la lista normalmente se mostrarán con viñetas.<br>
+            En &lt;ol&gt;, los elementos de la lista normalmente se mostrarán con números o letras.<br>
+                      
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;ol&gt;<br>
+                &lt;li&gt;Coffee&lt;/li&gt;<br>
+                &lt;li&gt;Tea&lt;/li&gt;<br>
+                &lt;li&gt;Milk&lt;/li&gt;<br>
+                &lt;/ol&gt;<br>
+                
+                &lt;ul&gt;<br>
+                &lt;li&gt;Coffee&lt;/li&gt;<br>
+                &lt;li&gt;Tea&lt;/li&gt;<br>
+                &lt;li&gt;Milk&lt;/li&gt;<br>
+                &lt;/ul&gt;<br>
+
+                <ol>
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                    <li>Milk</li>
+                </ol>
+                
+                <ul>
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                    <li>Milk</li>
+                </ul>
+
+            </p>
+        </p>
+
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="map"><h2>&lt;map&gt;</h2> 
+            La &lt;map&gt;etiqueta se utiliza para definir un mapa de imagen. Un mapa de imagen es una imagen con áreas clicables.<br>
+            El atributo de nombre requerido del &lt;map&gt;elemento está asociado con el atributo usemap de &lt;img&gt; y crea una
+            relación entre la imagen y el mapa.<br>
+            El &lt;map&gt;elemento contiene una serie de elementos &lt;area&gt; que definen las áreas en las que se puede hacer clic
+            en el mapa de imagen.<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379"&gt;<br>
+                
+                &lt;map name="workmap"&gt;<br>
+                &lt;area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm"&gt;<br>
+                &lt;area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm"&gt;<br>
+                &lt;area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm"&gt;<br>
+                &lt;/map&gt;<br>
+
+                <img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+                
+                <map name="workmap">
+                    <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+                    <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+                    <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+                </map>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="mark"><h2>&lt;mark&gt;</h2> 
+            La &lt;mark&gt;etiqueta define el texto que debe marcarse o resaltarse.  <br>                   
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                   &lt;p&gt;Do not forget to buy &lt;mark&gt;milk&lt;/mark&gt; today.&lt;/p&gt;<br>
+                   <p>Do not forget to buy <mark>milk</mark> today.</p>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="menu"><h2>&lt;menu&gt;</h2> 
+            La &lt;menu&gt;etiqueta define una lista desordenada de contenido.<br>
+            Utilice la &lt;menu&gt;etiqueta junto con la etiqueta &lt;li&gt; para crear elementos de menú.<br>
+            Nota: &lt;menu&gt; la etiqueta es una alternativa a la &lt;ul&gt;etiqueta y los navegadores tratarán estas dos listas
+            por igual.<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;menu&gt;<br>
+                &lt;li&gt;Coffee&lt;/li&gt;<br>
+                &lt;li&gt;Tea&lt;/li&gt;<br>
+                &lt;li&gt;Milk&lt;/li&gt;<br>
+                &lt;/menu&gt;<br>
+
+                <menu>
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                    <li>Milk</li>
+                </menu>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="meter"><h2>&lt;meter&gt;</h2> 
+            La &lt;meter&gt;etiqueta define una medida escalar dentro de un rango conocido, o un valor fraccionario. Esto también se
+            conoce como calibre.<br>
+            Ejemplos: uso del disco, la relevancia del resultado de una consulta, etc.<br>
+            Nota: La &lt;meter&gt;etiqueta no debe usarse para indicar progreso (como en una barra de progreso). Para las barras de
+            progreso, use la etiqueta &lt;progress&gt; .<br>
+            Consejo: ¡Agregue siempre la etiqueta &lt;label&gt; para obtener mejores prácticas de accesibilidad!<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;label for="disk_c"&gt;Disk usage C:&lt;/label&gt;<br>
+                &lt;meter id="disk_c" value="2" min="0" max="10"&gt;2 out of 10&lt;/meter&gt;&lt;br&gt;<br>
+                
+                &lt;label for="disk_d"&gt;Disk usage D:&lt;/label&gt;<br>
+                &lt;meter id="disk_d" value="0.6"&gt;60%&lt;/meter&gt;<br>
+
+                <label for="disk_c">Disk usage C:</label>
+                <meter id="disk_c" value="2" min="0" max="10">2 out of 10</meter><br>
+                
+                <label for="disk_d">Disk usage D:</label>
+                <meter id="disk_d" value="0.6">60%</meter>
+
+            </p>
+        </p>
+
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="noscript"><h2>&lt;noscript&gt;</h2> 
+            La &lt;noscript&gt;etiqueta define un contenido alternativo que se mostrará a los usuarios que tienen scripts
+            deshabilitados en su navegador o que tienen un navegador que no admite scripts.<br>
+            El &lt;noscript&gt;elemento se puede usar tanto en &lt;head&gt; como en &lt;body&gt;. Al usarse dentro de &lt;head&gt;,
+            &lt;noscript&gt;solo puede contener los elementos &lt;link&gt;, &lt;style&gt; y &lt;meta&gt;.<br>
+            <br> Admite atributos globales.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;script&gt;<br>
+                document.write("Hello World!")<br>
+                &lt;/script&gt;<br>
+                &lt;noscript&gt;Your browser does not support JavaScript!&lt;/noscript&gt;<br>
+
+                <script>
+                    document.write("Hello World!")
+                </script>
+                <noscript>Your browser does not support JavaScript!</noscript>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="object"><h2>&lt;object&gt;</h2> 
+            La &lt;object&gt;etiqueta define un contenedor para un recurso externo.<br>
+            El recurso externo puede ser una página web, una imagen, un reproductor multimedia o una aplicación complementaria.<br>
+            La &lt;object&gt;etiqueta fue diseñada originalmente para integrar complementos del navegador.<br>
+            Los complementos son programas de computadora que amplían la funcionalidad estándar del navegador.<br>
+            Los complementos se han utilizado para muchos propósitos diferentes:<br>
+            • Ejecutar subprogramas de Java<br>
+            • Ejecutar controles ActiveX<br>
+            • Mostrar películas Flash<br>
+            • Mostrar mapas<br>
+            • Analizar en busca de virus<br>
+            • Verificar una identificación bancaria<br>
+                     
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                   &lt;object data="snippet.html" width="500" height="200"&gt;&lt;/object&gt;<br>
+
+                   <object data="snippet.html" width="500" height="200"></object>
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="ol"><h2>&lt;ol&gt;</h2> 
+            La &lt;ol&gt;etiqueta define una lista ordenada. Una lista ordenada puede ser numérica o alfabética.<br>
+            La etiqueta &lt;li&gt; se utiliza para definir cada elemento de la lista.<br>
+                      
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;ol&gt;<br>
+                &lt;li&gt;Coffee&lt;/li&gt;<br>
+                &lt;li&gt;Tea&lt;/li&gt;<br>
+                &lt;li&gt;Milk&lt;/li&gt;<br>
+                &lt;/ol&gt;<br>
+                
+                &lt;ol start="50"&gt;<br>
+                &lt;li&gt;Coffee&lt;/li&gt;<br>
+                &lt;li&gt;Tea&lt;/li&gt;<br>
+                &lt;li&gt;Milk&lt;/li&gt;<br>
+                &lt;/ol&gt;<br>
+
+                <ol>
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                    <li>Milk</li>
+                </ol>
+                
+                <ol start="50">
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                    <li>Milk</li>
+                </ol>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="optgroup"><h2>&lt;optgroup&gt;</h2> 
+            La &lt;optgroup&gt;etiqueta se utiliza para agrupar opciones relacionadas en un elemento &lt;select&gt; (lista
+            desplegable).<br>
+            Si tiene una lista larga de opciones, los grupos de opciones relacionadas son más fáciles de manejar para el usuario.<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;label for="cars"&gt;Choose a car:&lt;/label&gt;<br>
+                &lt;select name="cars" id="cars"&gt;<br>
+                &lt;optgroup label="Swedish Cars"&gt;<br>
+                &lt;option value="volvo"&gt;Volvo&lt;/option&gt;<br>
+                &lt;option value="saab"&gt;Saab&lt;/option&gt;<br>
+                &lt;/optgroup&gt;<br>
+                &lt;optgroup label="German Cars"&gt;<br>
+                &lt;option value="mercedes"&gt;Mercedes&lt;/option&gt;<br>
+                &lt;option value="audi"&gt;Audi&lt;/option&gt;<br>
+                &lt;/optgroup&gt;<br>
+                &lt;/select&gt;<br>
+
+                <label for="cars">Choose a car:</label>
+                <select name="cars" id="cars">
+                    <optgroup label="Swedish Cars">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                    </optgroup>
+                    <optgroup label="German Cars">
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                    </optgroup>
+                </select>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="option"><h2>&lt;option&gt;</h2> 
+            La &lt;option&gt;etiqueta define una opción en una lista de selección.<br>
+            &lt;option&gt;Los elementos van dentro de un elemento &lt;select&gt; , &lt;optgroup&gt; o &lt;datalist&gt; .<br>
+            Nota: La &lt;option&gt;etiqueta se puede utilizar sin ningún atributo, pero normalmente se necesita el atributo de valor
+            , que indica lo que se envía al servidor cuando se envía el formulario.<br>
+            Consejo: si tiene una lista larga de opciones, puede agrupar las opciones relacionadas dentro de la etiqueta
+            &lt;optgroup&gt; .<br>
+                     
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;label for="cars"&gt;Choose a car:&lt;/label&gt;<br>
+                
+                &lt;select id="cars"&gt;<br>
+                &lt;option value="volvo"&gt;Volvo&lt;/option&gt;<br>
+                &lt;option value="saab"&gt;Saab&lt;/option&gt;<br>
+                &lt;option value="opel"&gt;Opel&lt;/option&gt;<br>
+                &lt;option value="audi"&gt;Audi&lt;/option&gt;<br>
+                &lt;/select&gt;<br>
+
+                <label for="cars">Choose a car:</label>
+                
+                <select id="cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="opel">Opel</option>
+                    <option value="audi">Audi</option>
+                </select>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="output"><h2>&lt;output&gt;</h2> 
+            La &lt;output&gt;etiqueta se utiliza para representar el resultado de un cálculo (como el realizado por un script).  <br>                   
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;form oninput="x.value=parseInt(a.value)+parseInt(b.value)"&gt;<br>
+                &lt;input type="range" id="a" value="50"&gt;<br>
+                +&lt;input type="number" id="b" value="25"&gt;<br>
+                =&lt;output name="x" for="a b"&gt;&lt;/output&gt;<br>
+                &lt;/form&gt;<br>
+
+                <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                    <input type="range" id="a" value="50">
+                    +<input type="number" id="b" value="25">
+                    =<output name="x" for="a b"></output>
+                </form>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="p"><h2>&lt;p&gt;</h2> 
+            La &lt;p&gt;etiqueta define un párrafo.<br>
+            Los navegadores agregan automáticamente una sola línea en blanco antes y después de cada &lt;p&gt; elemento.<br>
+            
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                   &lt;p&gt;This is some text in a paragraph.&lt;/p&gt;<br>
+
+                   <p>This is some text in a paragraph.</p>
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="param"><h2>&lt;param&gt;</h2> 
+            La &lt;param&gt;etiqueta se utiliza para definir parámetros para un elemento &lt;object&gt; .<br>
+                     
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;object data="horse.wav"&gt;<br>
+                &lt;param name="autoplay" value="true"&gt;<br>
+                &lt;/object&gt;<br>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="picture"><h2>&lt;picture&gt;</h2> 
+            La &lt;picture&gt;etiqueta brinda a los desarrolladores web más flexibilidad para especificar recursos de imágenes.<br>
+            El uso más común de este &lt;picture&gt;elemento será la dirección artística en diseños adaptables. En lugar de tener
+            una imagen que se amplía o reduce según el ancho de la ventana gráfica, se pueden diseñar varias imágenes para que
+            ocupen mejor la ventana gráfica del navegador.<br>
+            El &lt;picture&gt;elemento contiene dos etiquetas: una o más etiquetas &lt;source&gt; y una etiqueta &lt;img&gt; .<br>
+            El navegador buscará el primer elemento &lt;source&gt; donde la consulta de medios coincida con el ancho actual de la
+            ventana gráfica y mostrará la imagen correcta (especificada en el atributo srcset). El elemento &lt;img&gt; es necesario
+            como último elemento secundario del &lt;picture&gt;elemento, como alternativa si ninguna de las etiquetas source
+            coincide.<br>
+            Consejo: El &lt;picture&gt;elemento funciona de forma similar a &lt;video&gt; y &lt;audio&gt;. Se configuran diferentes
+            fuentes y se utiliza la primera que se ajuste a las preferencias.<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;picture&gt;
+                &lt;source media="(min-width:650px)" srcset="img_pink_flowers.jpg"&gt;<br>
+                &lt;source media="(min-width:465px)" srcset="img_white_flower.jpg"&gt;<br>
+                &lt;img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;"&gt;<br>
+                &lt;/picture&gt;<br>
+
+                <picture>
+                    <source media="(min-width:650px)" srcset="img_pink_flowers.jpg">
+                    <source media="(min-width:465px)" srcset="img_white_flower.jpg">
+                    <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+                </picture>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="pre"><h2>&lt;pre&gt;</h2> 
+            La &lt;pre&gt;etiqueta define texto preformateado.<br>
+            El texto de un &lt;pre&gt;elemento se muestra con una fuente de ancho fijo y conserva tanto los espacios como los saltos
+            de línea. Se mostrará exactamente como está escrito en el código fuente HTML.<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;pre&gt;<br>
+                Text in a pre element<br>
+                is displayed in a fixed-width<br>
+                font, and it preserves<br>
+                both spaces and<br>
+                line breaks<br>
+                &lt;/pre&gt;<br>
+
+                <pre>
+                Text in a pre element
+                is displayed in a fixed-width
+                font, and it preserves
+                both      spaces and
+                line breaks
+                </pre>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="progress"><h2>&lt;progress&gt;</h2> 
+            La &lt;progress&gt;etiqueta representa el progreso de finalización de una tarea.<br>
+            Consejo: ¡Agregue siempre la etiqueta &lt;label&gt; para obtener mejores prácticas de accesibilidad!<br>
+            Consejo: utilice la &lt;progress&gt;etiqueta junto con JavaScript para mostrar el progreso de una tarea.<br>
+            Nota : La &lt;progress&gt;etiqueta no es adecuada para representar un indicador (por ejemplo, el uso del espacio en
+            disco o la relevancia del resultado de una consulta). Para representar un indicador, utilice la etiqueta &lt;meter&gt; .<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;label for="file"&gt;Downloading progress:&lt;/label&gt;<br>
+                &lt;progress id="file" value="32" max="100"&gt; 32% &lt;/progress&gt;<br>
+
+                <label for="file">Downloading progress:</label>
+                <progress id="file" value="32" max="100"> 32% </progress>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="q"><h2>&lt;q&gt;</h2> 
+            La &lt;q&gt;etiqueta define una cita corta.<br>
+            Los navegadores normalmente insertan comillas alrededor de las citas.<br>
+            Consejo: utilice &lt;blockquote&gt; para citas largas.<br>
+                      
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;p&gt;WWF's goal is to:<br>
+                &lt;q&gt;Build a future where people live in harmony with nature.&lt;/q&gt;<br>
+                We hope they succeed.&lt;/p&gt;<br>
+
+                <p>WWF's goal is to:
+                    <q>Build a future where people live in harmony with nature.</q>
+                    We hope they succeed.
+                </p>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="rp"><h2>&lt;rp&gt;</h2> 
+            La &lt;rp&gt;etiqueta se puede utilizar para proporcionar paréntesis alrededor de un texto ruby, para que lo muestren
+            los navegadores que no admiten anotaciones ruby.<br>
+            Usar &lt;rp&gt;junto con &lt;ruby&gt; y &lt;rt&gt; : el elemento &lt;ruby&gt; consta de uno o más caracteres que
+            necesitan una explicación/pronunciación, un elemento &lt;rt&gt; que proporciona esa información y un &lt;rp&gt;elemento
+            opcional que define qué mostrar para los navegadores que no admiten anotaciones ruby.<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;ruby&gt;<br>
+                漢 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;ㄏㄢˋ&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;<br>
+                &lt;/ruby&gt;<br>
+
+                <ruby>
+                    漢 <rp>(</rp>
+                    <rt>ㄏㄢˋ</rt>
+                    <rp>)</rp>
+                </ruby>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="rt"><h2>&lt;rt&gt;</h2> 
+            La &lt;rt&gt;etiqueta define una explicación o pronunciación de caracteres (para tipografía del este de Asia) en una
+            anotación ruby.<br>
+            Usar &lt;rt&gt;junto con &lt;ruby&gt; y &lt;rp&gt; : el elemento &lt;ruby&gt; consta de uno o más caracteres que
+            necesitan una explicación/pronunciación, un &lt;rt&gt;elemento que proporciona esa información y un elemento &lt;rp&gt;
+            opcional que define qué mostrar para los navegadores que no admiten anotaciones ruby<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;ruby&gt;<br>
+                漢 &lt;rt&gt; ㄏㄢˋ &lt;/rt&gt;<br>
+                &lt;/ruby&gt;<br>
+
+                <ruby>
+                    漢 <rt> ㄏㄢˋ </rt>
+                </ruby>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="ruby"><h2>&lt;ruby&gt;</h2> 
+            La &lt;ruby&gt;etiqueta especifica una anotación ruby.<br>
+            Una anotación Ruby es un pequeño texto adicional que se añade al texto principal para indicar la pronunciación o el
+            significado de los caracteres correspondientes. Este tipo de anotación se utiliza a menudo en publicaciones japonesas.
+            Usar &lt;ruby&gt;junto con &lt;rt&gt; y &lt;rp&gt; : el &lt;ruby&gt;elemento consta de uno o más caracteres que
+            necesitan una explicación/pronunciación, un elemento &lt;rt&gt; que proporciona esa información y un elemento &lt;rp&gt;
+            opcional que define qué mostrar para los navegadores que no admiten anotaciones ruby.<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;ruby&gt;<br>
+                漢 &lt;rt&gt; ㄏㄢˋ &lt;/rt&gt;<br>
+                &lt;/ruby&gt;<br>
+
+                <ruby>
+                    漢 <rt> ㄏㄢˋ </rt>
+                </ruby>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="s"><h2>&lt;s&gt;</h2> 
+            La &lt;s&gt;etiqueta especifica texto que ya no es correcto, preciso o relevante. El texto se mostrará tachado.<br>
+            La &lt;s&gt;etiqueta no debe usarse para definir texto eliminado en un documento, utilice la etiqueta &lt;del&gt; para
+            eso.<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;p&gt;&lt;s&gt;Only 50 tickets left!&lt;/s&gt;&lt;/p&gt;<br>
+                &lt;p&gt;SOLD OUT!&lt;/p&gt;<br>
+
+                <p><s>Only 50 tickets left!</s></p>
+                <p>SOLD OUT!</p>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="samp"><h2>&lt;samp&gt;</h2> 
+            La &gt;samp&gt;etiqueta se utiliza para definir la salida de muestra de un programa informático. El contenido se muestra
+            en la fuente monoespaciada predeterminada del navegador.<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &gt;p&gt;Message from my computer:&gt;/p&gt;<br>
+                
+                &gt;p&gt;&gt;samp&gt;File not found.&gt;br&gt;Press F1 to continue&gt;/samp&gt;&gt;/p&gt;<br>
+
+                <p>Message from my computer:</p>
+                
+                <p><samp>File not found.<br>Press F1 to continue</samp></p>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="script"><h2>&lt;script&gt;</h2> 
+            La &lt;script&gt;etiqueta se utiliza para incrustar un script del lado del cliente (JavaScript).<br>
+            El &lt;script&gt;elemento contiene declaraciones de script o apunta a un archivo de script externo a través del atributo
+            src.<br>
+            Los usos comunes de JavaScript son la manipulación de imágenes, la validación de formularios y los cambios dinámicos de
+            contenido.<br>
+            Consejo: También observe el elemento &lt;noscript&gt; para los usuarios que tienen scripts deshabilitados en su
+            navegador o que tienen un navegador que no admite scripts del lado del cliente.<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;script&gt;<br>
+                document.getElementById("demo").innerHTML = "Hello JavaScript!";<br>
+                &lt;/script&gt;<br>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="search"><h2>&lt;search&gt;</h2> 
+            La &lt;search&gt;etiqueta se utiliza para especificar que aquí viene un conjunto de elementos relacionados con la
+            búsqueda.<br>
+            Los elementos dentro de un &lt;search&gt;elemento normalmente pueden ser elementos de formulario utilizados para
+            realizar una búsqueda.<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;search&gt;<br>
+                &lt;form&gt;<br>
+                &lt;input name="fsrch" id="fsrch" placeholder="Search W3Schools"&gt;<br>
+                &lt;/form&gt;<br>
+                &lt;/search&gt;<br>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="section"><h2>&lt;section&gt;</h2> 
+            La &lt;section&gt;etiqueta define una sección en un documento.<br>                    
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;section&gt;<br>
+                &lt;h2&gt;WWF History&lt;/h2&gt;<br>
+                &lt;p&gt;The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the<br>
+                conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in<br>
+                1961.&lt;/p&gt;<br>
+                &lt;/section&gt;<br>
+                
+                &lt;section&gt;<br>
+                &lt;h2&gt;WWF's Symbol&lt;/h2&gt;<br>
+                &lt;p&gt;The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi<br>
+                that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.&lt;/p&gt;<br>
+                &lt;/section&gt;<br>
+                
+                <section>
+                    <h2>WWF History</h2>
+                    <p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the
+                        conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was
+                        founded in 1961.</p>
+                </section>
+                
+                <section>
+                    <h2>WWF's Symbol</h2>
+                    <p>The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi
+                        that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.</p>
+                </section>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="select"><h2>&lt;select&gt;</h2> 
+            El &lt;select&gt;elemento se utiliza para crear una lista desplegable.<br>
+            El &lt;select&gt;elemento se utiliza con mayor frecuencia en un formulario para recopilar información del usuario.<br>
+            El nameatributo es necesario para hacer referencia a los datos del formulario después de enviarlo (si omite el
+            nameatributo, no se enviarán datos de la lista desplegable).<br>
+            El idatributo es necesario para asociar la lista desplegable con una etiqueta.<br>
+            Las etiquetas &lt;option&gt;&lt;select&gt; dentro del elemento definen las opciones disponibles en la lista desplegable.<br>
+            Consejo: ¡Agregue siempre la etiqueta &lt;label&gt; para obtener mejores prácticas de accesibilidad!<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;label for="cars"&gt;Choose a car:&lt;/label&gt;<br>
+                
+                &lt;select name="cars" id="cars"&gt;<br>
+                &lt;option value="volvo"&gt;Volvo&lt;/option&gt;<br>
+                &lt;option value="saab"&gt;Saab&lt;/option&gt;<br>
+                &lt;option value="mercedes"&gt;Mercedes&lt;/option&gt;<br>
+                &lt;option value="audi"&gt;Audi&lt;/option&gt;<br>
+                &lt;/select&gt;<br>
+
+                <label for="cars">Choose a car:</label>
+                
+                <select name="cars" id="cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                </select>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="small"><h2>&lt;small&gt;</h2> 
+            La &lt;small&gt;etiqueta define texto más pequeño (como copyright y otros comentarios secundarios).  <br>                   
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;p&gt;This is some normal text.&lt;/p&gt;<br>
+                &lt;p&gt;&lt;small&gt;This is some smaller text.&lt;/small&gt;&lt;/p&gt;<br>
+
+                <p>This is some normal text.</p>
+                <p><small></small>This is some smaller text.</small></p>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="source"><h2>&lt;source&gt;</h2> 
+            La &lt;source&gt;etiqueta se utiliza para especificar múltiples recursos multimedia para elementos multimedia, como
+            &lt;video&gt; , &lt;audio&gt; y &lt;picture&gt; .<br>
+            La &lt;source&gt;etiqueta permite especificar archivos de vídeo, audio e imagen alternativos que el navegador puede
+            seleccionar, según su compatibilidad o el ancho de la ventana gráfica. El navegador seleccionará el primero
+            &lt;source&gt; que admita.<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;audio controls&gt;<br>
+                &lt;source src="horse.ogg" type="audio/ogg"&gt;<br>
+                &lt;source src="horse.mp3" type="audio/mpeg"&gt;<br>
+                Your browser does not support the audio element.<br>
+                &lt;/audio&gt;<br>
+
+                <audio controls>
+                    <source src="horse.ogg" type="audio/ogg">
+                    <source src="horse.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="span"><h2>&lt;span&gt;</h2> 
+            La &lt;span&gt;etiqueta es un contenedor en línea que se utiliza para marcar una parte de un texto o una parte de un
+            documento.<br>
+            
+            La &lt;span&gt;etiqueta se puede diseñar fácilmente con CSS o manipular con JavaScript usando el atributo de clase o id.<br>
+            
+            La &lt;span&gt;etiqueta es muy parecida al elemento &lt;div&gt; , pero &lt;div&gt; es un elemento a nivel de bloque y
+            &lt;span&gt;es un elemento en línea.<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                   &lt;p&gt;My mother has &lt;span style="color:blue"&gt;blue&lt;/span&gt; eyes.&lt;/p&gt;<br>
+
+                   <p>My mother has <span style="color:blue">blue</span> eyes.</p>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="style"><h2>&lt;style&gt;</h2> 
+        La &lt;style&gt;etiqueta se utiliza para definir información de estilo (CSS) para un documento.<br>
+        Dentro del &lt;style&gt;elemento se especifica cómo deben representarse los elementos HTML en un navegador.<br>
+        El &lt;style&gt;elemento debe estar incluido dentro de la &lt;head&gt;sección del documento.<br>
+        Nota: Cuando un navegador lee una hoja de estilo, formatea el documento HTML según la información contenida en ella. Si
+        se han definido propiedades para el mismo selector (elemento) en diferentes hojas de estilo, se utilizará el valor de la
+        última hoja de estilo leída.<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;html&gt;<br>
+                &lt;head&gt;<br>
+                &lt;style&gt;<br>
+                h1 {color:red;}<br>
+                p {color:blue;}<br>
+                &lt;/style&gt;<br>
+                &lt;/head&gt;<br>
+                &lt;body&gt;<br>
+                
+                &lt;h1&gt;A heading&lt;/h1&gt;<br>
+                &lt;p&gt;A paragraph.&lt;/p&gt;<br>
+                
+                &lt;/body&gt;<br>
+                &lt;/html&gt;<br>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="sub"><h2>&lt;sub&gt;</h2> 
+            La &lt;sub&gt;etiqueta define el texto en subíndice. Este texto aparece medio carácter por debajo de la línea normal y,
+            a veces, se representa con una fuente más pequeña. Puede usarse para fórmulas químicas, como H₂O .<br>
+            Consejo: utilice la etiqueta &lt;sup&gt; para definir texto en superíndice.<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                   &lt;p&gt;This text contains &lt;sub&gt;subscript&lt;/sub&gt; text.&lt;/p&gt;<br>
+
+                   <p>This text contains <sub>subscript</sub> text.</p>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="summary"><h2>&lt;summary&gt;</h2> 
+            La &lt;summary&gt;etiqueta define un encabezado visible para el elemento &lt;details&gt; . Se puede hacer clic en el
+            encabezado para ver u ocultar los detalles.<br>
+            Nota: El &lt;summary&gt;elemento debe ser el primer elemento secundario del elemento &lt;detail<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;details&gt;<br>
+                &lt;summary&gt;Epcot Center&lt;/summary&gt;<br>
+                &lt;p&gt;Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions,<br>
+                award-winning fireworks and seasonal special events.&lt;/p&gt;<br>
+                &lt;/details&gt;<br>
+
+                <details>
+                    <summary>Epcot Center</summary>
+                    <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions,
+                        award-winning fireworks and seasonal special events.</p>
+                </details>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="sup"><h2>&lt;sup&gt;</h2> 
+            La &lt;sup&gt;etiqueta define texto en superíndice. El texto en superíndice aparece medio carácter por encima de la
+            línea normal y, a veces, se representa con una fuente más pequeña. El texto en superíndice puede usarse para notas al
+            pie, como WWW [1] .<br>
+            Consejo: utilice la etiqueta &lt;sub&gt; para definir el texto en subíndice.<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                   &lt;p&gt;This text contains &lt;sup&gt;superscript&lt;/sup&gt; text.&lt;/p&gt;<br>
+
+                   <p>This text contains <sup>superscript</sup> text.</p>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="svg"><h2>&lt;svg&gt;</h2> 
+            La &lt;svg&gt;etiqueta define un contenedor para gráficos SVG.<br>
+            SVG tiene varios métodos para dibujar rutas, cuadros, círculos, texto e imágenes gráficas.<br>
+
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &&lt;svg width="300" height="200"&gt;<br>
+                &lt;polygon points="100,10 40,198 190,78 10,78 160,198"<br>
+                style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" /&gt;<br>
+                &lt;/svg&gt;<br>
+
+                <svg width="300" height="200">
+                    <polygon points="100,10 40,198 190,78 10,78 160,198"
+                        style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+                </svg>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="table"><h2>&lt;table&gt;</h2> 
+        La &lt;table&gt;etiqueta define una tabla HTML.<br>
+        Una tabla HTML consta de un &lt;table&gt;elemento y uno o más elementos &lt;tr&gt; , &lt;th&gt; y &lt;td&gt; .<br>
+        El elemento &lt;tr&gt; define una fila de tabla, el elemento &lt;th&gt; define un encabezado de tabla y el elemento
+        &lt;td&gt; define una celda de tabla.<br>
+        Una tabla HTML también puede incluir elementos &lt;caption&gt; , &lt;colgroup&gt; , &lt;thead&gt; , &lt;tfoot&gt; y &lt;tbody&gt; .<br>
+                    
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;table&gt;<br>
+                &lt;tr&gt;<br>
+                &lt;th&gt;Month&lt;/th&gt;<br>
+                &lt;th&gt;Savings&lt;/th&gt;<br>
+                &lt;/tr&gt;<br>
+                &lt;tr&gt;<br>
+                &lt;td&gt;January&lt;/td&gt;<br>
+                &lt;td&gt;$100&lt;/td&gt;<br>
+                &lt;/tr&gt;<br>
+                &lt;/table&gt;<br>
+
+                <table>
+                    <tr>
+                        <th>Month</th>
+                        <th>Savings</th>
+                    </tr>
+                    <tr>
+                        <td>January</td>
+                        <td>$100</td>
+                    </tr>
+                </table>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="tbody"><h2>&lt;tbody&gt;</h2> 
+            La &lt;tbody&gt;etiqueta se utiliza para agrupar el contenido del cuerpo en una tabla HTML.<br>
+            
+            El &lt;tbody&gt;elemento se utiliza junto con los elementos &lt;thead&gt; y &lt;tfoot&gt; para especificar cada parte de
+            una tabla (cuerpo, encabezado, pie de página).<br>
+            
+            Los navegadores pueden usar estos elementos para permitir el desplazamiento por el cuerpo de la tabla independientemente
+            del encabezado y el pie de página. Además, al imprimir una tabla grande que ocupa varias páginas, estos elementos
+            permiten que el encabezado y el pie de página se impriman en la parte superior e inferior de cada página.<br>
+            
+            Nota: El &lt;tbody&gt;elemento debe tener una o más etiquetas &lt;tr&gt; dentro.<br>
+            
+            La &lt;tbody&gt;etiqueta debe usarse en el siguiente contexto: como elemento secundario de un elemento &lt;table&gt; ,
+            después de cualquier elemento &lt;caption&gt; , &lt;colgroup&gt; y &lt;thead&gt; .<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;table&gt;<br>
+                &lt;thead&gt;<br>
+                &lt;tr&gt;<br>
+                &lt;th&gt;Month&lt;/th&gt;<br>
+                &lt;th&gt;Savings&lt;/th&gt;<br>
+                &lt;/tr&gt;<br>
+                &lt;/thead&gt;<br>
+                &lt;tbody&gt;<br>
+                &lt;tr&gt;<br>
+                &lt;td&gt;January&lt;/td&gt;<br>
+                &lt;td&gt;$100&lt;/td&gt;<br>
+                &lt;/tr&gt;<br>
+                &lt;tr&gt;<br>
+                &lt;td&gt;February&lt;/td&gt;<br>
+                &lt;td&gt;$80&lt;/td&gt;<br>
+                &lt;/tr&gt;<br>
+                &lt;/tbody&gt;<br>
+                &lt;tfoot&gt;<br>
+                &lt;tr&gt;<br>
+                &lt;td&gt;Sum&lt;/td&gt;<br>
+                &lt;td&gt;$180&lt;/td&gt;<br>
+                &lt;/tr&gt;<br>
+                &lt;/tfoot&gt;<br>
+                &lt;/table&gt;<br>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Savings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>January</td>
+                            <td>$100</td>
+                        </tr>
+                        <tr>
+                            <td>February</td>
+                            <td>$80</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Sum</td>
+                            <td>$180</td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="td"><h2>&lt;td&gt;</h2> 
+            La &lt;td&gt;etiqueta define una celda de datos estándar en una tabla HTML.<br>
+            Una tabla HTML tiene dos tipos de celdas:<br>
+            • Celdas de encabezado: contienen información del encabezado (creada con el elemento &lt;th&gt; )<br>
+            • Celdas de datos: contienen datos (creados con el &lt;td&gt;elemento)<br>
+            El texto de &lt;td&gt;los elementos es regular y está alineado a la izquierda de forma predeterminada.<br>
+            El texto en los elementos &lt;th&gt; aparece en negrita y centrado de forma predeterminada.<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;table&gt;<br>
+                &lt;tr&gt;<br>
+                &lt;td&gt;Cell A&lt;/td&gt;<br>
+                &lt;td&gt;Cell B&lt;/td&gt;<br>
+                &lt;/tr&gt;<br>
+                &lt;tr&gt;<br>
+                &lt;td&gt;Cell C&lt;/td&gt;<br>
+                &lt;td&gt;Cell D&lt;/td&gt;<br>
+                &lt;/tr&gt;<br>
+                &lt;/table&gt;<br>
+
+                <table>
+                    <tr>
+                        <td>Cell A</td>
+                        <td>Cell B</td>
+                    </tr>
+                    <tr>
+                        <td>Cell C</td>
+                        <td>Cell D</td>
+                    </tr>
+                </table>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="template"><h2>&lt;template&gt;</h2> 
+            La &lt;template&gt;etiqueta se utiliza como contenedor para guardar cierto contenido HTML oculto para el usuario cuando
+            se carga la página.<br>
+            El contenido interior &lt;template&gt;se puede representar más tarde con JavaScript.<br>
+            Puedes usar la &lt;template&gt;etiqueta si tienes código HTML que quieras usar repetidamente, pero solo si lo solicitas.<br>
+            Para hacerlo sin la &lt;template&gt;etiqueta, debes crear el código HTML con JavaScript para evitar que el navegador lo
+            renderice.<br>
+            <br> Admite atributos globales.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;button onclick="showContent()"&gt;Show hidden content&lt;/button&gt;<br>
+                
+                &lt;template&gt;<br>
+                &lt;h2&gt;Flower&lt;/h2&gt;<br>
+                &lt;img src="img_white_flower.jpg" width="214" height="204"&gt;<br>
+                &lt;/template&gt;<br>
+                
+                &lt;script&gt;<br>
+                function showContent() {<br>
+                let temp = document.getElementsByTagName("template")[0];<br>
+                let clon = temp.content.cloneNode(true);<br>
+                document.body.appendChild(clon);<br>
+                }<br>
+                &lt;/script&gt;<br>
+
+                <button onclick="showContent()">Show hidden content</button>
+                
+                <template>
+                    <h2>Flower</h2>
+                    <img src="img_white_flower.jpg" width="214" height="204">
+                </template>
+                
+                <script>
+                    function showContent() {
+                        let temp = document.getElementsByTagName("template")[0];
+                        let clon = temp.content.cloneNode(true);
+                        document.body.appendChild(clon);
+                    }
+                </script>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="textarea"><h2>&lt;textarea&gt;</h2> 
+            La &lt;textarea&gt;etiqueta define un control de entrada de texto de varias líneas.<br>
+            El &lt;textarea&gt;elemento se utiliza a menudo en un formulario para recopilar información del usuario, como
+            comentarios o reseñas.<br>
+            Un área de texto puede contener una cantidad ilimitada de caracteres y el texto se representa en una fuente de ancho
+            fijo (normalmente Courier).<br>
+            El tamaño de un área de texto se especifica mediante los atributos colsy rows(o con CSS).<br>
+            El nameatributo es necesario para hacer referencia a los datos del formulario después de enviarlo (si omite el
+            nameatributo, no se enviarán datos del área de texto).<br>
+            El idatributo es necesario para asociar el área de texto con una etiqueta.<br>
+            Consejo: ¡Agregue siempre la etiqueta &lt;label&gt; para obtener mejores prácticas de accesibilidad!<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;label for="w3review"&gt;Review of W3Schools:&lt;/label&gt;<br>
+                
+                &lt;textarea id="w3review" name="w3review" rows="4" cols="50"&gt;<br>
+                At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.<br>
+                &lt;/textarea&gt;<br>
+
+                <label for="w3review">Review of W3Schools:</label>
+                
+                <textarea id="w3review" name="w3review" rows="4" cols="50">
+                At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
+                </textarea>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="tfoot"><h2>&lt;tfoot&gt;</h2> 
+            La &lt;tfoot&gt;etiqueta se utiliza para agrupar el contenido del pie de página en una tabla HTML.<br>
+            El &lt;tfoot&gt;elemento se utiliza junto con los elementos &lt;thead&gt; y &lt;tbody&gt; para especificar cada parte de
+            una tabla (pie de página, encabezado, cuerpo).<br>
+            Los navegadores pueden usar estos elementos para permitir el desplazamiento por el cuerpo de la tabla independientemente
+            del encabezado y el pie de página. Además, al imprimir una tabla grande que ocupa varias páginas, estos elementos
+            permiten que el encabezado y el pie de página se impriman en la parte superior e inferior de cada página.<br>
+            Nota: El &lt;tfoot&gt;elemento debe tener una o más etiquetas &lt;tr&gt; dentro.<br>
+            La &lt;tfoot&gt;etiqueta debe usarse en el siguiente contexto: como elemento secundario de un elemento &lt;table&gt; ,
+            después de cualquier elemento &lt;caption&gt; , &lt;colgroup&gt; , &lt;thead&gt; y &lt;tbody&gt; .<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;table&gt;<br>
+                &lt;thead&gt;<br>
+                &lt;tr&gt;<br>
+                &lt;th&gt;Month&lt;/th&gt;<br>
+                &lt;th&gt;Savings&lt;/th&gt;<br>
+                &lt;/tr&gt;<br>
+                &lt;/thead&gt;<br>
+                &lt;tbody&gt;<br>
+                &lt;tr&gt;<br>
+                &lt;td&gt;January&lt;/td&gt;<br>
+                &lt;td&gt;$100&lt;/td&gt;<br>
+                &lt;/tr&gt;<br>
+                &lt;tr&gt;<br>
+                &lt;td&gt;February&lt;/td&gt;<br>
+                &lt;td&gt;$80&lt;/td&gt;<br>
+                &lt;/tr&gt;<br>
+                &lt;/tbody&gt;<br>
+                &lt;tfoot&gt;<br>
+                &lt;tr&gt;<br>
+                &lt;td&gt;Sum&lt;/td&gt;<br>
+                &lt;td&gt;$180&lt;/td&gt;<br>
+                &lt;/tr&gt;<br>
+                &lt;/tfoot&gt;<br>
+                &lt;/table&gt;<br>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Savings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>January</td>
+                            <td>$100</td>
+                        </tr>
+                        <tr>
+                            <td>February</td>
+                            <td>$80</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Sum</td>
+                            <td>$180</td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="th"><h2>&lt;th&gt;</h2> 
+        La &lt;th&gt;etiqueta define una celda de encabezado en una tabla HTML.<br>
+        Una tabla HTML tiene dos tipos de celdas:<br>
+        • Celdas de encabezado: contienen información del encabezado (creada con el &lt;th&gt;elemento)<br>
+        • Celdas de datos: contienen datos (creados con el elemento &lt;td&gt; )<br>
+        El texto de &lt;th&gt;los elementos aparece en negrita y centrado de forma predeterminada.<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;table&gt;<br>
+                &lt;tr&gt;<br>
+                &lt;th&gt;Month&lt;/th&gt;<br>
+                &lt;th&gt;Savings&lt;/th&gt;<br>
+                &lt;/tr&gt;<br>
+                &lt;tr&gt;<br>
+                &lt;td&gt;January&lt;/td&gt;<br>
+                &lt;td&gt;$100&lt;/td&gt;<br>
+                &lt;/tr&gt;<br>
+                &lt;tr&gt;<br>
+                &lt;td&gt;February&lt;/td&gt;<br>
+                &lt;td&gt;$80&lt;/td&gt;<br>
+                &lt;/tr&gt;<br>
+                &lt;/table&gt;<br>
+
+                <table>
+                    <tr>
+                        <th>Month</th>
+                        <th>Savings</th>
+                    </tr>
+                    <tr>
+                        <td>January</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>
+                        <td>February</td>
+                        <td>$80</td>
+                    </tr>
+                </table>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="thead"><h2>&lt;thead&gt;</h2> 
+            La &lt;thead&gt;etiqueta se utiliza para agrupar el contenido del encabezado en una tabla HTML.<br>
+            El &lt;thead&gt;elemento se utiliza junto con los elementos &lt;tbody&gt; y &lt;tfoot&gt; para especificar cada parte de
+            una tabla (encabezado, cuerpo, pie de página).<br>
+            Los navegadores pueden usar estos elementos para permitir el desplazamiento por el cuerpo de la tabla independientemente
+            del encabezado y el pie de página. Además, al imprimir una tabla grande que ocupa varias páginas, estos elementos
+            permiten que el encabezado y el pie de página se impriman en la parte superior e inferior de cada página.<br>
+            Nota: El &lt;thead&gt;elemento debe tener una o más etiquetas &lt;tr&gt; dentro.<br>
+            La &lt;thead&gt;etiqueta debe usarse en el siguiente contexto: como elemento secundario de un elemento &lt;table&gt; ,
+            después de cualquier elemento &lt;caption&gt; y &lt;colgroup&gt; , y antes de cualquier elemento &lt;tbody&gt; ,
+            &lt;tfoot&gt; y &lt;tr&gt; .<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;table&gt;<br>
+                &lt;thead&gt;<br>
+                &lt;tr&gt;<br>
+                &lt;th&gt;Month&lt;/th&gt;<br>
+                &lt;th&gt;Savings&lt;/th&gt;<br>
+                &lt;/tr&gt;<br>
+                &lt;/thead&gt;<br>
+                &lt;tbody&gt;<br>
+                &lt;tr&gt;<br>
+                &lt;td&gt;January&lt;/td&gt;<br>
+                &lt;td&gt;$100&lt;/td&gt;<br>
+                &lt;/tr&gt;<br>
+                &lt;tr&gt;<br>
+                &lt;td&gt;February&lt;/td&gt;<br>
+                &lt;td&gt;$80&lt;/td&gt;<br>
+                &lt;/tr&gt;<br>
+                &lt;/tbody&gt;<br>
+                &lt;tfoot&gt;<br>
+                &lt;tr&gt;<br>
+                &lt;td&gt;Sum&lt;/td&gt;<br>
+                &lt;td&gt;$180&lt;/td&gt;<br>
+                &lt;/tr&gt;<br>
+                &lt;/tfoot&gt;<br>
+                &lt;/table&gt;<br>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Savings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>January</td>
+                            <td>$100</td>
+                        </tr>
+                        <tr>
+                            <td>February</td>
+                            <td>$80</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Sum</td>
+                            <td>$180</td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="time"><h2>&lt;time&gt;</h2> 
+            La &lt;time&gt;etiqueta define una hora específica (o fecha y hora).<br>
+            El datetime atributo de este elemento se utiliza para traducir la hora a un formato legible por máquina para que los
+            navegadores puedan ofrecer agregar recordatorios de fechas a través del calendario del usuario y los motores de búsqueda
+            puedan producir resultados de búsqueda más inteligentes.<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;p&gt;Open from &lt;time&gt;10:00&lt;/time&gt; to &lt;time&gt;21:00&lt;/time&gt; every weekday.&lt;/p&gt;<br>
+                
+                &lt;p&gt;I have a date on &lt;time datetime="2008-02-14 20:00"&gt;Valentines day&lt;/time&gt;.&lt;/p&gt;<br>
+
+                <p>Open from <time>10:00</time> to <time>21:00</time> every weekday.</p>
+                
+                <p>I have a date on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="tr"><h2>&lt;tr&gt;</h2> 
+            La &lt;tr&gt;etiqueta define una fila en una tabla HTML.<br>
+            Un &lt;tr&gt;elemento contiene uno o más elementos &lt;th&gt; o &lt;td&gt; .<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;table&gt;<br>
+                &lt;tr&gt;<br>
+                &lt;th&gt;Month&lt;/th&gt;<br>
+                &lt;th&gt;Savings&lt;/th&gt;<br>
+                &lt;/tr&gt;<br>
+                &lt;tr&gt;<br>
+                &lt;td&gt;January&lt;/td&gt;<br>
+                &lt;td&gt;$100&lt;/td&gt;<br>
+                &lt;/tr&gt;<br>
+                &lt;tr&gt;<br>
+                &lt;td&gt;February&lt;/td&gt;<br>
+                &lt;td&gt;$80&lt;/td&gt;<br>
+                &lt;/tr&gt;<br>
+                &lt;/table&gt;<br>
+
+
+                <table>
+                    <tr>
+                        <th>Month</th>
+                        <th>Savings</th>
+                    </tr>
+                    <tr>
+                        <td>January</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>
+                        <td>February</td>
+                        <td>$80</td>
+                    </tr>
+                </table>
+
+            </p>
+        </p>
+        <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="u"><h2>&lt;u&gt;</h2> 
+            La &lt;u&gt;etiqueta representa texto sin estructurar y con un estilo diferente al del texto normal, como palabras mal
+            escritas o nombres propios en chino. El contenido interior suele mostrarse subrayado. Puedes cambiar esto con CSS (ver
+            ejemplo a continuación).<br>
+            Consejo: ¡Evite utilizar el &lt;u&gt; elemento donde pueda confundirse con un hipervínculo!<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                   &lt;p&gt;This is some &lt;u&gt;mispeled&lt;/u&gt; text.&lt;/p&gt;<br>
+
+                   <p>This is some <u>mispeled</u> text.</p>
+
+            </p>
+        </p>
+         <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="ul"><h2>&lt;ul&gt;</h2> 
+            La &lt;ul&gt;etiqueta define una lista desordenada (con viñetas).<br>
+            Utilice la &lt;ul&gt;etiqueta junto con la etiqueta &lt;li&gt; para crear listas desordenadas.<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;ul&gt;<br>
+                &lt;li&gt;Coffee&lt;/li&gt;<br>
+                &lt;li&gt;Tea&lt;/li&gt;<br>
+                &lt;li&gt;Milk&lt;/li&gt;<br>
+                &lt;/ul&gt;<br>
+
+                <ul>
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                    <li>Milk</li>
+                </ul>
+
+            </p>
+        </p>
+         <!--nuevo a partir de aqui*****************************************************************************-->
+        <p id="video"><h2>&lt;video&gt;</h2> 
+            La &lt;video&gt;etiqueta se utiliza para incrustar contenido de vídeo en un documento, como un clip de película u otras
+            transmisiones de vídeo.<br>
+            La &lt;video&gt;etiqueta contiene una o más &lt;source&gt;etiquetas con diferentes fuentes de vídeo. El navegador
+            seleccionará la primera fuente compatible.<br>
+            El texto entre las etiquetas &lt;video&gt;y &lt;/video&gt; solo se mostrará en navegadores que no admitan el elemento
+            &lt;video&gt;.<br>
+            Hay tres formatos de vídeo compatibles con HTML: MP4, WebM y OGG.<br>
+            <br> Admite atributos globales y de evento.<br>
+            <h3>Ejemplo de uso</h3>
+            <p class="ej">
+                &lt;video width="320" height="240" controls&gt;<br>
+                &lt;source src="movie.mp4" type="video/mp4"&gt;<br>
+                &lt;source src="movie.ogg" type="video/ogg"&gt;<br>
+                Your browser does not support the video tag.<br>
+                &lt;/video&gt;<br>
+
+                <video width="320" height="240" controls>
+                    <source src="movie.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+
+            </p>
+        </p>
+
+    </div>
+</body>
+</html>
